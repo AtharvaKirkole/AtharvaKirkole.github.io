@@ -183,7 +183,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <!-- replace with specific Heard AI project URL when available -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — Project info</a>
           <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — More on LinkedIn</a>
         </div>
       </div>
@@ -208,7 +208,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <!-- swap in specific MSU IT project URLs once public -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — Project info</a>
           <a class="inline-btn" href="https://tech.msu.edu/" target="_blank" rel="noopener">↗ Click here — MSU IT Services</a>
         </div>
       </div>
@@ -234,7 +234,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <!-- add a case-study link here when available -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — Project info</a>
           <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — More on LinkedIn</a>
         </div>
       </div>
@@ -259,7 +259,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <a class="inline-btn" href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">↗ Click here — Published abstract</a>
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Code / notes</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — Code / notes</a>
         </div>
       </div>
 
@@ -362,7 +362,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <!-- swap href to the actual fork / repo URL when it's published -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
           <a class="inline-btn" href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">↗ Click here — Original NanoGPT</a>
         </div>
       </div>
@@ -388,7 +388,7 @@ export const CONTENT = {
         </div>
         <div class="role-links">
           <!-- Amazon capstones are typically NDA'd — link to a write-up when public -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Case study</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — Case study</a>
           <a class="inline-btn" href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener">↗ Click here — AWS Bedrock</a>
         </div>
       </div>
@@ -410,7 +410,7 @@ export const CONTENT = {
           <span class="chip">CNN</span><span class="chip">A*</span>
         </div>
         <div class="role-links">
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
           <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — Project write-up</a>
         </div>
       </div>
@@ -434,13 +434,13 @@ export const CONTENT = {
           <span class="chip">Shader Math</span>
         </div>
         <div class="role-links">
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — View source on GitHub</a>
+          <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">↗ Click here — View source on GitHub</a>
           <a class="inline-btn" href="https://www.w3.org/TR/webgpu/" target="_blank" rel="noopener">↗ Click here — WebGPU spec</a>
         </div>
       </div>
 
       <p class="modal-footer-cta">
-        <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">See more on GitHub →</a>
+        <a class="inline-btn" href="https://github.com/kirkolea" target="_blank" rel="noopener">See more on GitHub →</a>
         <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Download resume (PDF)</a>
       </p>
     `,
@@ -535,11 +535,11 @@ export const CONTENT = {
           </span>
           <span class="contact-go">↗</span>
         </a>
-        <a class="contact-row" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">
+        <a class="contact-row" href="https://github.com/kirkolea" target="_blank" rel="noopener">
           <span class="contact-ico">🐙</span>
           <span class="contact-text">
             <span class="contact-k">GitHub</span>
-            <span class="contact-v">github.com/AtharvaKirkole</span>
+            <span class="contact-v">github.com/kirkolea</span>
           </span>
           <span class="contact-go">↗</span>
         </a>
