@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atharva Kirkole — Computer Science · HPC · AI</title>
+  <meta name="description" content="Atharva Kirkole — MS Computer Science at Michigan State University. HPC, AI research, WebGPU." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <canvas id="ocean-canvas"></canvas>
+
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Initializing WebGPU wave kernel</p>
+      <p class="loader-sub" id="loader-sub">Allocating 512x512 r32float storage textures</p>
+    </div>
+  </div>
+
+  <div id="backend-badge" class="backend-badge hidden">
+    <span class="dot"></span>
+    <span id="backend-name">WebGPU</span>
+    <span class="sep">·</span>
+    <span id="fps">0</span> fps
+    <span class="sep">·</span>
+    <span id="cells">0</span> cells
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">AK</div>
+      <div class="brand-text">
+        <div class="brand-name">Atharva Kirkole</div>
+        <div class="brand-role">CS · HPC · AI Research</div>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <button class="nav-link" data-open="about">About</button>
+      <button class="nav-link" data-open="work">Work</button>
+      <button class="nav-link" data-open="projects">Projects</button>
+      <button class="nav-link" data-open="research">Research</button>
+      <button class="nav-link" data-open="hobbies">Hobbies</button>
+      <button class="nav-link" data-open="contact">Contact</button>
+    </nav>
+    <a class="resume-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf" aria-label="Download resume PDF">
+      <span class="resume-ico">↓</span>
+      <span>Resume</span>
+    </a>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero-title">
+      <span class="line">Building systems</span>
+      <span class="line">at the speed of <em>silicon</em>.</span>
+    </h1>
+    <p class="hero-kicker">
+      MS Computer Science · Michigan State · Expected Dec 2026
+    </p>
+    <p class="hero-hint">
+      <span class="pulse"></span>
+      Move your cursor — the ocean is a live wave-equation PDE running on the GPU.
+      Click any icon to dive in.
+    </p>
+  </section>
+
+  <div id="icon-field" class="icon-field"></div>
+
+  <footer class="site-footer">
+    <div class="foot-col">
+      <span class="k">East Lansing, MI</span>
+    </div>
+    <div class="foot-col mid">
+      <a href="mailto:kirkolea@msu.edu">kirkolea@msu.edu</a>
+      <span>·</span>
+      <a href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="foot-col right">
+      <span class="k">∂²u/∂t² = c²∇²u</span>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8000)",
+      "Bash(git -C \"C:/Users/Atharva/Desktop/11A - personal_web\" status)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(where.exe winget *)",
+      "Bash(git -C \"C:/Users/Atharva/Desktop/11A - personal_web\" config user.name)",
+      "Bash(git -C \"C:/Users/Atharva/Desktop/11A - personal_web\" config user.email)",
+      "Bash(git config *)",
+      "Bash(winget install *)",
+      "Bash(mkdir -p \"C:/Users/Atharva/Desktop/ocean-webgpu/js\" \"C:/Users/Atharva/Desktop/ocean-webgpu/css\")",
+      "Bash(cp \"C:/Users/Atharva/Desktop/11A - personal_web/js/ocean.js\" \"C:/Users/Atharva/Desktop/ocean-webgpu/js/ocean.js\")",
+      "Bash(cp \"C:/Users/Atharva/Desktop/11A - personal_web/js/ripples.js\" \"C:/Users/Atharva/Desktop/ocean-webgpu/js/ripples.js\")",
+      "Read(//c/Users/Atharva/Desktop/**)",
+      "Read(//c/Users/Atharva/Desktop/ocean-webgpu/**)",
+      "Bash(where.exe gh *)",
+      "Bash(export PATH=\"/c/Program Files/GitHub CLI:$PATH\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=kirkolea -c user.email=kirkolea@msu.edu commit -m 'Initial commit: personal site with WebGPU ocean *)"
+    ]
+  }
+}
