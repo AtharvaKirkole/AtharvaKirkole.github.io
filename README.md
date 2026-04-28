@@ -14,7 +14,7 @@ Personal portfolio for [Atharva Kirkole](https://linkedin.com/in/atharva-kirkole
 - **Glass-morphism UI** — `backdrop-filter: blur()` on icons, modals, header, badges.
 - **Zero dependencies.** Pure ES modules. No build step.
 
-The wave simulation is published as a standalone library: **[ocean-webgpu](https://github.com/kirkolea/ocean-webgpu)**.
+The wave simulation is published as a standalone library: **[ocean-webgpu](https://github.com/AtharvaKirkole/ocean-webgpu)**.
 
 ## Run locally
 
