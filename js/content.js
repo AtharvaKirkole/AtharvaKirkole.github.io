@@ -21,16 +21,16 @@ export const CONTENT = {
     title: "Atharva Kirkole",
     html: `
       <div class="photo-frame" aria-hidden="true"></div>
-      <p>I'm a <strong>Computer Science graduate student</strong> at Michigan State University. I finished my <strong>BS in CS with Honors in 3 years</strong> (GPA 3.93) and I'm now on an accelerated one-year <strong>MS track</strong> (graduating Dec 2026) alongside the <strong>Graduate Certificate in High Performance Computing</strong>.</p>
-      <p>I like the part of the stack where <em>physics meets code</em> — GPU kernels, compilers and runtimes, AI infrastructure, and web systems that have to be fast. This site itself is a 2D wave-equation PDE running on the GPU.</p>
+      <p>I'm a <strong>Computer Science graduate student</strong> at Michigan State University on an <strong>accelerated path</strong> — finished my <strong>BS in CS with Honors in 3 years</strong> (GPA 3.93, Tau Beta Pi) and now finishing the <strong>MS in 1 year</strong> (GPA 3.93, graduating May 2026) alongside the <strong>Graduate Certificate in High Performance Computing</strong>.</p>
+      <p>I like the part of the stack where <em>physics meets code</em> — GPU kernels, AI infrastructure, geospatial systems, and web systems that have to be fast. This site itself is a 2D wave-equation PDE running on the GPU.</p>
 
       <h4>At a glance</h4>
       <div class="stat-grid">
         <div class="stat-card"><p class="k">Degrees</p><p class="v accent">BS → MS</p></div>
         <div class="stat-card"><p class="k">Undergrad GPA</p><p class="v">3.93</p></div>
-        <div class="stat-card"><p class="k">Graduate GPA</p><p class="v">3.9</p></div>
+        <div class="stat-card"><p class="k">Graduate GPA</p><p class="v">3.93</p></div>
         <div class="stat-card"><p class="k">BS finished in</p><p class="v">3 years</p></div>
-        <div class="stat-card"><p class="k">MS target</p><p class="v">Dec 2026</p></div>
+        <div class="stat-card"><p class="k">MS target</p><p class="v">May 2026</p></div>
         <div class="stat-card"><p class="k">Location</p><p class="v">East Lansing, MI</p></div>
       </div>
 
@@ -56,18 +56,21 @@ export const CONTENT = {
     eyebrow: "Education",
     title: "BS in 3 years · MS in 1",
     html: `
+      <p><em>Accelerated path: completed B.S. in 3 years + M.S. in 1 year — both in Computer Science.</em></p>
+
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Master of Science, Computer Science</span> · <span class="role-org">Michigan State University</span></div>
-          <span class="role-date">Aug 2025 – Dec 2026</span>
+          <span class="role-date">Aug 2025 – May 2026</span>
         </div>
-        <div class="role-loc">East Lansing, MI · GPA 3.9 · Accelerated 1-year program</div>
-        <p>Pursuing the <strong>Graduate Certificate in High Performance Computing</strong> alongside the MS.</p>
+        <div class="role-loc">East Lansing, MI · GPA 3.93 · Accelerated 1-year program</div>
+        <p>Pursuing the <strong>Graduate Certificate in High Performance Computing</strong> alongside the MS. Teaching Assistant for <strong>Object-Oriented Programming</strong>.</p>
         <div class="chip-row">
           <span class="chip">HPC Certificate</span>
           <span class="chip">CUDA / OpenMP</span>
-          <span class="chip">Parallel Systems</span>
-          <span class="chip">Advanced Algorithms</span>
+          <span class="chip">Parallel Programming (CSE 822)</span>
+          <span class="chip">Big Data (Hadoop / MapReduce)</span>
+          <span class="chip">Pattern Recognition</span>
         </div>
       </div>
 
@@ -167,99 +170,79 @@ export const CONTENT = {
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2024 – Present</span>
+          <span class="role-date">Mar 2026 – Present</span>
         </div>
         <div class="role-loc">East Lansing, MI · NSF Convergence Accelerator Phase 2 ($5M)</div>
-        
+
         <ul>
-          <li>Full-stack speech tooling app — <em>Node.js, React, AWS Cloudscape</em>.</li>
-          <li><strong>Stuttered-speech synthesis + personalized fine-tuning pipeline</strong> (~4 min/user) — up to <strong>23% accuracy improvement</strong>.</li>
-          <li>Contributor on an NSF-funded project on accessible speech AI.</li>
+          <li>Contributing to a <strong>$5M NSF Convergence Accelerator (Phase 2)</strong> project on accessible speech AI.</li>
+          <li>Built a full-stack, real-time speech application (Node.js, React, AWS Cloudscape) on a <strong>Claude-based LLM framework</strong> serving <strong>~300 concurrent sessions at &lt;400 ms end-to-end latency</strong>.</li>
+          <li>Developed a personalized per-user fine-tuning pipeline (~4 min/user), improving recognition accuracy <strong>23% (WER ~14% → ~10.8%)</strong> via rapid adaptation.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
+          <span class="chip">Claude LLM</span>
           <span class="chip">React / Cloudscape</span><span class="chip">Node.js</span>
           <span class="chip">Accessibility</span><span class="chip">NSF</span>
-        </div>
-        <div class="role-links">
-          <!-- replace with specific Heard AI project URL when available -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
-          <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — More on LinkedIn</a>
         </div>
       </div>
 
       <!-- MSU IT -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Web Developer Intern</span> · <span class="role-org">MSU IT Services</span></div>
+          <div><span class="role-title">Software Developer</span> · <span class="role-org">MSU IT Services</span></div>
           <span class="role-date">Jun 2024 – Apr 2026</span>
         </div>
         <div class="role-loc">Michigan State University · East Lansing, MI</div>
-       
+
         <ul>
-          <li>Migrated <strong>50+ university websites</strong> across Sitecore CMS.</li>
-          <li>Raised accessibility score from <strong>80% to 99.7%</strong> — WCAG 2.1, ADA, ARIA.</li>
-          <li>Modernized services with PHP, JavaScript, Docker, custom Student-data REST APIs.</li>
-          <li>Led full platform migration from <strong>Google Maps → ESRI ArcGIS</strong>, cutting IT expense ~20%.</li>
+          <li>Led end-to-end migration of the campus web-mapping platform off Google Maps onto a self-managed <strong>ESRI ArcGIS</strong> stack serving <strong>100K+ daily API requests</strong> across <strong>~35K monthly active users</strong>, rebuilding every map surface around custom geospatial layers and cutting mapping/licensing cost <strong>~20% (≈$45K/yr)</strong>.</li>
+          <li>Owned geospatial data modeling for <strong>~12K+ campus location entities/POIs</strong> (buildings, entrances, accessibility nodes); designed layer rendering and an automated ingestion pipeline that cut route-compute latency <strong>~30% (~210 ms → ~145 ms)</strong>.</li>
+          <li>Modernized campus web services (PHP, JavaScript, Docker, custom student-data REST APIs); raised site accessibility from <strong>80% to 99.7%</strong> (WCAG 2.1 / ADA / ARIA) across <strong>~40 production surfaces</strong>.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">PHP</span><span class="chip">Docker</span><span class="chip">Sitecore</span>
-          <span class="chip">ArcGIS / ESRI</span><span class="chip">Accessibility</span>
-        </div>
-        <div class="role-links">
-          <!-- swap in specific MSU IT project URLs once public -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
-          <a class="inline-btn" href="https://tech.msu.edu/" target="_blank" rel="noopener">↗ Click here — MSU IT Services</a>
+          <span class="chip">ESRI ArcGIS</span><span class="chip">ArcGIS Portal</span>
+          <span class="chip">Geospatial Modeling</span><span class="chip">A* Routing</span>
+          <span class="chip">PHP</span><span class="chip">Docker</span>
+          <span class="chip">REST APIs</span><span class="chip">Accessibility</span>
         </div>
       </div>
 
       <!-- Amazon -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Capstone Project Student</span> · <span class="role-org">Amazon</span></div>
+          <div><span class="role-title">SDE Intern, University Capstone</span> · <span class="role-org">Amazon</span></div>
           <span class="role-date">Jan 2025 – May 2025</span>
         </div>
         <div class="role-loc">East Lansing, MI</div>
-       
+
         <ul>
-          <li>AI-powered semantic code search with <strong>99% accuracy</strong> for internal architecture assets.</li>
-          <li>Python, Node.js on <em>AWS Lambda, DynamoDB, S3, OpenSearch</em>.</li>
-          <li><strong>Bedrock + SageMaker</strong> for dynamically-chunked vector embeddings; <strong>95% accurate RAG pipeline</strong>.</li>
-          <li>Employee-recommendation system via vector similarity + GitHub contribution analysis.</li>
-          <li>React + Cloudscape UI over RESTful APIs.</li>
+          <li>Built an AI-powered semantic code-search system over <strong>~1.2M+ internal architecture assets</strong> using <strong>AWS OpenSearch</strong> (Elasticsearch-compatible), Lambda, DynamoDB, and S3.</li>
+          <li>Designed a <strong>RAG-style retrieval pipeline</strong> — dynamically chunked vector embeddings via <strong>Bedrock + SageMaker</strong>, indexed in OpenSearch — at <strong>~90 ms p95</strong>.</li>
+          <li>Tuned indexing/ranking to lift top-k relevance <strong>~18% (NDCG@10)</strong> and added vector-similarity employee recommendations over GitHub signals.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">AWS</span><span class="chip">Bedrock</span><span class="chip">SageMaker</span>
-          <span class="chip">OpenSearch</span><span class="chip">RAG</span><span class="chip">React</span>
-        </div>
-        <div class="role-links">
-          <!-- add a case-study link here when available -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Project info</a>
-          <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — More on LinkedIn</a>
+          <span class="chip">OpenSearch</span><span class="chip">RAG</span>
+          <span class="chip">NDCG@10</span><span class="chip">Vector Search</span>
         </div>
       </div>
 
       <!-- Thompson Lab -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Machine Learning Researcher</span> · <span class="role-org">Thompson Maize Lab</span></div>
+          <div><span class="role-title">Machine Learning Research Intern</span> · <span class="role-org">Thompson Maize Lab</span></div>
           <span class="role-date">Aug 2023 – May 2024</span>
         </div>
         <div class="role-loc">Michigan State University</div>
-        
+
         <ul>
-          <li>Scalable SQL + MongoDB architecture for <strong>120+ dimensional phenotypic &amp; genomic data</strong>.</li>
-          <li>Random Forest / ML models (TensorFlow, Python, R) — <strong>72% accuracy</strong> yield prediction.</li>
-          <li>Statistical analysis on Anthesis-Silking Interval (ASI); yield impact under stress.</li>
-          <li>Presented at <strong>NAPPN Conference</strong>, Purdue — <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">published abstract</a>.</li>
+          <li>Built and evaluated <strong>Random Forest / ML models</strong> (TensorFlow, Python, R) for crop-yield prediction on <strong>120+ dim datasets</strong> at <strong>~72% accuracy</strong>.</li>
+          <li>Presented at the <strong>NAPPN Conference</strong>, Purdue — <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">published abstract</a>.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">Random Forest</span><span class="chip">TensorFlow</span>
-          <span class="chip">R</span><span class="chip">MongoDB</span><span class="chip">Genomics</span>
-        </div>
-        <div class="role-links">
-          <a class="inline-btn" href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">↗ Click here — Published abstract</a>
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Code / notes</a>
+          <span class="chip">Python</span><span class="chip">R</span><span class="chip">Genomics</span>
         </div>
       </div>
 
@@ -280,10 +263,6 @@ export const CONTENT = {
           <span class="chip">Leadership</span><span class="chip">Crisis Response</span>
           <span class="chip">Mentorship</span><span class="chip">Event Programming</span>
         </div>
-        <div class="role-links">
-          <a class="inline-btn" href="https://liveon.msu.edu/" target="_blank" rel="noopener">↗ Click here — MSU Live On (Housing)</a>
-          <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — More on LinkedIn</a>
-        </div>
       </div>
 
       <p class="modal-footer-cta">
@@ -300,13 +279,14 @@ export const CONTENT = {
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2024 – Present</span>
+          <span class="role-date">Mar 2026 – Present</span>
         </div>
         <div class="role-loc">NSF Convergence Accelerator Phase 2 · $5M</div>
-        
-        <p>Working on <strong>accessible speech AI for speakers who stutter</strong>. Built a personalized fine-tuning pipeline that adapts a base model to a new speaker in roughly <strong>4 minutes</strong>, lifting downstream accuracy by <strong>up to 23%</strong>. Full-stack React/Node/Cloudscape tooling drives data collection and inference in real time.</p>
+
+        <p>Working on <strong>accessible speech AI</strong> on a <strong>Claude-based LLM framework</strong> serving <strong>~300 concurrent sessions at &lt;400 ms end-to-end latency</strong>. Built a personalized per-user fine-tuning pipeline (~4 min/user) that lifts recognition accuracy <strong>23% (WER ~14% → ~10.8%)</strong> via rapid adaptation. Full-stack React/Node/Cloudscape tooling drives data collection and inference in real time.</p>
         <div class="chip-row">
           <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
+          <span class="chip">Claude LLM</span>
           <span class="chip">Accessibility</span><span class="chip">NSF</span>
         </div>
       </div>
@@ -328,11 +308,11 @@ export const CONTENT = {
       </div>
 
       <h3>HPC coursework &amp; research interests</h3>
-      <p>The HPC Graduate Certificate is letting me go deeper on the <em>systems</em> side of AI: attention-kernel optimization (CUDA / OpenMP / SIMD / cache-aware tiling), distributed training, memory-hierarchy-aware algorithm design, and WebGPU as a vehicle for browser-native HPC (this site being exhibit A).</p>
+      <p>The HPC Graduate Certificate is letting me go deeper on the <em>systems</em> side of AI: <strong>attention-kernel optimization</strong> (CUDA / OpenMP / SIMD / cache-aware tiling), <strong>tensor-core GEMM</strong> with PTX intrinsics (<code>mma.sync.m16n8k8</code>, TF32, padded shared memory), distributed training, memory-hierarchy-aware algorithm design, and WebGPU as a vehicle for browser-native HPC (this site being exhibit A).</p>
       <div class="chip-row">
-        <span class="chip">CUDA</span><span class="chip">OpenMP</span>
-        <span class="chip">AVX2 / ISPC</span><span class="chip">Cache Tiling</span>
-        <span class="chip">WebGPU / WGSL</span>
+        <span class="chip">CUDA</span><span class="chip">PTX / mma.sync</span>
+        <span class="chip">OpenMP</span><span class="chip">AVX2 / FMA</span>
+        <span class="chip">Cache Tiling</span><span class="chip">WebGPU / WGSL</span>
       </div>
     `,
   },
@@ -342,54 +322,81 @@ export const CONTENT = {
     eyebrow: "Projects",
     title: "Selected Work",
     html: `
-      <!-- NanoGPT HPC -->
+      <!-- FitTrack -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">NanoGPT Attention Kernel Optimization</span> · <span class="role-org">CUDA · OpenMP · ISPC</span></div>
-          <span class="role-date">Jan 2026</span>
+          <div><span class="role-title">FitTrack — Wearable Time-Series Analytics &amp; Health Prediction</span> · <span class="role-org">Python · TensorFlow</span></div>
+          <span class="role-date">2025</span>
         </div>
-        
+
         <ul>
-          <li>Transformer attention in <strong>C++17</strong> with contiguous tensor layouts + 4D accessors for memory locality.</li>
-          <li><strong>Cache-aware tiling / blocking</strong> for the matmuls — reduced DRAM traffic, improved L1/L2 reuse.</li>
-          <li>Parallelized across batches / heads / rows with <strong>OpenMP</strong> + thread-private buffers; separate <strong>CUDA</strong> kernel path for GPU.</li>
-          <li>Vectorized hot loops with <strong>SIMD intrinsics / ISPC (AVX2)</strong> for linear-algebra kernels.</li>
+          <li>Fitness app that ingests <strong>live time-series data</strong> from wearable devices (heart rate, accelerometer, motion signals), visualizing streaming metrics on a real-time dashboard at <strong>~50 Hz sampling</strong>.</li>
+          <li>Trained ML models predicting <strong>age, gender, BMI, and body-fat %</strong> from sensor signals — <strong>~88% accuracy</strong>, <strong>~3.5% MAE</strong> on body-fat regression across <strong>~1.5M sample windows</strong>.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">CUDA</span><span class="chip">OpenMP</span>
-          <span class="chip">AVX2</span><span class="chip">ISPC</span>
-          <span class="chip">Cache Tiling</span><span class="chip">Roofline</span>
-        </div>
-        <div class="role-links">
-          <!-- swap href to the actual fork / repo URL when it's published -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
-          <a class="inline-btn" href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener">↗ Click here — Original NanoGPT</a>
+          <span class="chip">Python</span><span class="chip">TensorFlow</span>
+          <span class="chip">Time-Series</span><span class="chip">Wearables</span>
+          <span class="chip">Streaming Analytics</span>
         </div>
       </div>
 
-      <!-- Amazon Capstone -->
+      <!-- NanoGPT HPC -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Amazon Semantic Code Search</span> · <span class="role-org">AWS · RAG · Capstone</span></div>
-          <span class="role-date">Jan – May 2025</span>
+          <div><span class="role-title">NanoGPT Attention Kernel Optimization</span> · <span class="role-org">CUDA · C++17 · OpenMP</span></div>
+          <span class="role-date">Jan 2026</span>
         </div>
-        
+
         <ul>
-          <li><strong>99% accuracy</strong> semantic search over internal architecture assets.</li>
-          <li>Python / Node.js backend on Lambda, DynamoDB, S3, OpenSearch.</li>
-          <li><strong>Bedrock + SageMaker</strong> for dynamically-chunked embeddings; 95% accurate RAG retrieval.</li>
-          <li>Employee recommendation engine via vector similarity + GitHub contribution analysis.</li>
-          <li>Responsive React + Cloudscape UI over RESTful APIs.</li>
+          <li>Implemented Transformer multi-head attention in <strong>C++17</strong> over <code>[B, H, N, D]</code> tensors with a <strong>4D accessor</strong> collapsing index/stride arithmetic.</li>
+          <li><strong>Row-tiled Q·Kᵀ</strong> and P·V matmuls to keep K/V panels resident in L1/L2.</li>
+          <li>Parallelized across (batch, head) with <strong>OpenMP</strong>, vectorized with <strong>AVX2 + FMA</strong>, and fused matmul–softmax–matmul for a <strong>68× speedup</strong>.</li>
+          <li>Built a <strong>CUDA</strong> variant with cooperative shared-memory tiling and per-thread <strong>online-softmax</strong> state.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">AWS</span><span class="chip">Bedrock</span>
-          <span class="chip">SageMaker</span><span class="chip">OpenSearch</span>
-          <span class="chip">RAG</span><span class="chip">React</span>
+          <span class="chip">CUDA</span><span class="chip">C++17</span>
+          <span class="chip">OpenMP</span><span class="chip">AVX2 / FMA</span>
+          <span class="chip">Online Softmax</span><span class="chip">Cache Tiling</span>
         </div>
-        <div class="role-links">
-          <!-- Amazon capstones are typically NDA'd — link to a write-up when public -->
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — Case study</a>
-          <a class="inline-btn" href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener">↗ Click here — AWS Bedrock</a>
+      </div>
+
+      <!-- Tensor-Core GEMM -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">Tensor-Core GEMM (CUDA)</span> · <span class="role-org">CSE 822 · Parallel Programming</span></div>
+          <span class="role-date">Jan 2026</span>
+        </div>
+
+        <ul>
+          <li>Implemented a <strong>TF32 tensor-core GEMM</strong> using <code>mma.sync.m16n8k8</code> PTX intrinsics.</li>
+          <li><strong>float4-vectorized coalesced HBM loads</strong> with <strong>padded shared memory</strong> to eliminate bank conflicts.</li>
+          <li>Benchmarked across <strong>M ∈ [1, 3072] at K = N = 3072</strong>.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">CUDA</span><span class="chip">PTX</span>
+          <span class="chip">mma.sync.m16n8k8</span><span class="chip">TF32</span>
+          <span class="chip">Bank Conflicts</span><span class="chip">HBM Coalescing</span>
+        </div>
+      </div>
+
+      <!-- ocean-webgpu / This site -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">ocean-webgpu — Real-Time GPU Wave-Equation Library</span> · <span class="role-org">WebGPU · WGSL · GLSL</span></div>
+          <span class="role-date">2026</span>
+        </div>
+
+        <ul>
+          <li>2D wave-equation PDE as a <strong>WGSL compute shader</strong> — ping-pong <code>rgba16float</code> textures, CFL-stable Verlet integration.</li>
+          <li>Second kernel uses cooperative <strong><code>var&lt;workgroup&gt;</code> shared-memory tiling</strong> — the same pattern as the <code>__shared__</code> halo-tile trick in CUDA stencil codes.</li>
+          <li>Icons are displaced on the CPU using analytical ripple superposition, so the DOM bobs in sync with the GPU ocean — no readback.</li>
+          <li>Full <strong>WebGL2 fragment-shader fallback</strong> on <code>RGBA16F</code> for browsers without WebGPU.</li>
+          <li>Extracted as a standalone zero-dependency library (this site is exhibit A).</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">WebGPU</span><span class="chip">WGSL</span>
+          <span class="chip">WebGL2 / GLSL</span><span class="chip">PDE</span>
+          <span class="chip">Shared-Memory Tiling</span><span class="chip">CFL</span>
         </div>
       </div>
 
@@ -399,7 +406,7 @@ export const CONTENT = {
           <div><span class="role-title">AI Club Navigator</span> · <span class="role-org">Flutter + Flask + CNN</span></div>
           <span class="role-date">Jan 2023</span>
         </div>
-        
+
         <ul>
           <li>Cross-platform indoor-navigation app — <strong>CNN for image-based localization</strong>.</li>
           <li>Real-time route optimization with <strong>A*</strong> pathfinding over building layouts.</li>
@@ -408,34 +415,6 @@ export const CONTENT = {
         <div class="chip-row">
           <span class="chip">Flutter</span><span class="chip">Flask</span>
           <span class="chip">CNN</span><span class="chip">A*</span>
-        </div>
-        <div class="role-links">
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — GitHub repo</a>
-          <a class="inline-btn" href="https://linkedin.com/in/atharva-kirkole" target="_blank" rel="noopener">↗ Click here — Project write-up</a>
-        </div>
-      </div>
-
-      <!-- This site -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">This site</span> · <span class="role-org">WebGPU · WGSL · WebGL2</span></div>
-          <span class="role-date">2026</span>
-        </div>
-       
-        <ul>
-          <li>2D wave-equation PDE as a WGSL compute shader — ping-pong rgba16float textures at 512×512 cells/frame.</li>
-          <li>Cursor emits decaying Gaussian sources; GPU propagates the wavefront with absorbing boundaries.</li>
-          <li>Icons are displaced on the CPU using analytical ripple superposition, so the DOM bobs in sync with the GPU ocean.</li>
-          <li>Full WebGL2 fragment-shader fallback for browsers without WebGPU.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">WebGPU</span><span class="chip">WGSL</span>
-          <span class="chip">WebGL2</span><span class="chip">PDE</span>
-          <span class="chip">Shader Math</span>
-        </div>
-        <div class="role-links">
-          <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">↗ Click here — View source on GitHub</a>
-          <a class="inline-btn" href="https://www.w3.org/TR/webgpu/" target="_blank" rel="noopener">↗ Click here — WebGPU spec</a>
         </div>
       </div>
 

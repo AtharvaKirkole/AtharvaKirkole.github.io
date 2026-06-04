@@ -24,3 +24,9 @@ coverage/
 dist/
 build/
 .cache/
+
+# Local working files (resume drafts, scratch, lockfiles)
+.tmp/
+~$*
+Atharva Kirkol*.docx
+Atharva Kirkol*.pdf
