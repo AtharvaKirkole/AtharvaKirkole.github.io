@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atharva Kirkole — Computer Science · HPC · AI</title>
-  <meta name="description" content="Atharva Kirkole — MS Computer Science at Michigan State University. HPC, AI research, WebGPU." />
+  <meta name="description" content="Atharva Kirkole — B.S. '25 + M.S. '26 Computer Science, Michigan State University. HPC research (CUDA, MPI), AI systems, and ocean-webgpu — an open-source GPU wave-simulation library." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="loader-inner">
       <div class="loader-ring"></div>
       <p class="loader-text">Initializing WebGPU wave kernel</p>
-      <p class="loader-sub" id="loader-sub">Allocating 512x512 r32float storage textures</p>
+      <p class="loader-sub" id="loader-sub">Compiling 16×16 shared-memory tiled compute pipeline</p>
     </div>
   </div>
 
@@ -28,6 +28,8 @@
     <span id="fps">0</span> fps
     <span class="sep">·</span>
     <span id="cells">0</span> cells
+    <span class="sep" id="wg-sep">·</span>
+    <span id="wg-info"></span>
   </div>
 
   <header class="site-header">
@@ -46,10 +48,16 @@
       <button class="nav-link" data-open="hobbies">Hobbies</button>
       <button class="nav-link" data-open="contact">Contact</button>
     </nav>
-    <a class="resume-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf" aria-label="Download resume PDF">
-      <span class="resume-ico">↓</span>
-      <span>Resume</span>
-    </a>
+    <div class="header-actions">
+      <a class="resume-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf" aria-label="Download resume PDF">
+        <span class="resume-ico">↓</span>
+        <span>Resume</span>
+      </a>
+      <a class="resume-btn ghost" href="assets/transcript.pdf" download="Atharva_Kirkole_MSU_Transcript.pdf" aria-label="Download official MSU transcript PDF">
+        <span class="resume-ico">↓</span>
+        <span>Transcript</span>
+      </a>
+    </div>
   </header>
 
   <section class="hero">
@@ -58,7 +66,7 @@
       <span class="line">at the speed of <em>silicon</em>.</span>
     </h1>
     <p class="hero-kicker">
-      MS Computer Science · Michigan State · Expected Dec 2026
+      B.S. '25 · M.S. '26 Computer Science · Ph.D. in progress · Michigan State
     </p>
     <p class="hero-hint">
       <span class="pulse"></span>

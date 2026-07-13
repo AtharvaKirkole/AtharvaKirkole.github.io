@@ -674,6 +674,25 @@ button {
   font-size: 13px;
   line-height: 1;
 }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Glass variant — used for the transcript download so the two header
+   CTAs read as primary + secondary rather than two competing pills. */
+.resume-btn.ghost {
+  color: var(--ink-0);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 24px rgba(0, 10, 30, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.resume-btn.ghost:hover {
+  box-shadow: 0 12px 30px rgba(94, 240, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(94, 240, 255, 0.4);
+}
 
 /* ---------- Inline button (PDF, link CTAs inside modals) ---------- */
 .inline-btn {

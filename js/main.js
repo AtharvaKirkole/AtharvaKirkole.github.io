@@ -17,6 +17,8 @@ const badge      = document.getElementById("backend-badge");
 const badgeName  = document.getElementById("backend-name");
 const fpsEl      = document.getElementById("fps");
 const cellsEl    = document.getElementById("cells");
+const wgSepEl    = document.getElementById("wg-sep");
+const wgInfoEl   = document.getElementById("wg-info");
 
 const ripples = new RippleField();
 let ocean = null;
@@ -46,6 +48,15 @@ function setSize() {
 
     badgeName.textContent = ocean.backend;
     cellsEl.textContent = ocean.cells.toLocaleString();
+    if (ocean.workgroups) {
+      // One GPU thread per cell — surface the dispatch geometry so the
+      // parallelism is visible, not implied.
+      wgInfoEl.textContent =
+        `${ocean.workgroups.toLocaleString()} workgroups × ${ocean.threadsPerWorkgroup} threads`;
+    } else {
+      wgSepEl?.remove();
+      wgInfoEl?.remove();
+    }
     badge.classList.remove("hidden");
 
     // Seed a gentle initial ripple so the ocean isn't completely still

@@ -21,16 +21,16 @@ export const CONTENT = {
     title: "Atharva Kirkole",
     html: `
       <div class="photo-frame" aria-hidden="true"></div>
-      <p>I'm a <strong>Computer Science graduate student</strong> at Michigan State University on an <strong>accelerated path</strong> — finished my <strong>BS in CS with Honors in 3 years</strong> (GPA 3.93, Tau Beta Pi) and now finishing the <strong>MS in 1 year</strong> (GPA 3.93, graduating May 2026) alongside the <strong>Graduate Certificate in High Performance Computing</strong>.</p>
-      <p>I like the part of the stack where <em>physics meets code</em> — GPU kernels, AI infrastructure, geospatial systems, and web systems that have to be fast. This site itself is a 2D wave-equation PDE running on the GPU.</p>
+      <p>I'm a <strong>high-performance-computing researcher</strong> at Michigan State University on an <strong>accelerated path</strong> — <strong>B.S. in Computer Science with Honors in 3 years</strong> (GPA 3.92, Tau Beta Pi, May 2025), <strong>M.S. in 1 year</strong> (GPA 3.93, May 2026) with the <strong>Graduate Certificate in High-Performance Computing</strong>, and now a <strong>Ph.D. student</strong> doing HPC research at the <strong>SPaRTa Lab</strong> (Scalable Parallel Technologies).</p>
+      <p>I like the part of the stack where <em>physics meets code</em> — CUDA kernels, MPI at scale, AI infrastructure, geospatial systems, and web systems that have to be fast. This site itself runs my open-source <strong>ocean-webgpu</strong> library: a 2D wave-equation PDE solved every frame by a shared-memory tiled GPU compute kernel.</p>
 
       <h4>At a glance</h4>
       <div class="stat-grid">
-        <div class="stat-card"><p class="k">Degrees</p><p class="v accent">BS → MS</p></div>
-        <div class="stat-card"><p class="k">Undergrad GPA</p><p class="v">3.93</p></div>
+        <div class="stat-card"><p class="k">Degrees</p><p class="v accent">BS → MS → PhD</p></div>
+        <div class="stat-card"><p class="k">Undergrad GPA</p><p class="v">3.92</p></div>
         <div class="stat-card"><p class="k">Graduate GPA</p><p class="v">3.93</p></div>
-        <div class="stat-card"><p class="k">BS finished in</p><p class="v">3 years</p></div>
-        <div class="stat-card"><p class="k">MS target</p><p class="v">May 2026</p></div>
+        <div class="stat-card"><p class="k">BS + MS in</p><p class="v">3 + 1 years</p></div>
+        <div class="stat-card"><p class="k">Now</p><p class="v">PhD · SPaRTa Lab</p></div>
         <div class="stat-card"><p class="k">Location</p><p class="v">East Lansing, MI</p></div>
       </div>
 
@@ -44,9 +44,10 @@ export const CONTENT = {
         <li><a href="#/hobbies">Hobbies →</a></li>
       </ul>
 
-      <h4>Resume</h4>
+      <h4>Documents</h4>
       <p>
-        <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Download PDF resume</a>
+        <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Resume (PDF)</a>
+        <a class="inline-btn" href="assets/transcript.pdf" download="Atharva_Kirkole_MSU_Transcript.pdf">↓ Official MSU transcript (PDF)</a>
       </p>
     `,
   },
@@ -54,23 +55,37 @@ export const CONTENT = {
   /* ========================== EDUCATION ========================== */
   education: {
     eyebrow: "Education",
-    title: "BS in 3 years · MS in 1",
+    title: "BS in 3 · MS in 1 · now PhD",
     html: `
-      <p><em>Accelerated path: completed B.S. in 3 years + M.S. in 1 year — both in Computer Science.</em></p>
+      <p><em>Accelerated path: B.S. in 3 years + M.S. in 1 year — both in Computer Science, both verified in the official transcript below.</em></p>
+
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">Ph.D., Computer Science</span> · <span class="role-org">Michigan State University</span></div>
+          <span class="role-date">Fall 2026 – Present</span>
+        </div>
+        <div class="role-loc">East Lansing, MI · Doctoral program, College of Engineering</div>
+        <p>Doctoral research in <strong>high-performance computing</strong> with the <strong>SPaRTa Lab</strong> (Scalable Parallel Technologies) — CUDA boundary-integral solvers for particulate Stokes flow. Enrolled in doctoral dissertation research (CSE 999).</p>
+        <div class="chip-row">
+          <span class="chip">HPC</span>
+          <span class="chip">CUDA</span>
+          <span class="chip">Numerical Methods</span>
+          <span class="chip">SPaRTa Lab</span>
+        </div>
+      </div>
 
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Master of Science, Computer Science</span> · <span class="role-org">Michigan State University</span></div>
           <span class="role-date">Aug 2025 – May 2026</span>
         </div>
-        <div class="role-loc">East Lansing, MI · GPA 3.93 · Accelerated 1-year program</div>
-        <p>Pursuing the <strong>Graduate Certificate in High Performance Computing</strong> alongside the MS. Teaching Assistant for <strong>Object-Oriented Programming</strong>.</p>
+        <div class="role-loc">Degree granted May 2026 · GPA 3.93 · Completed in 1 year</div>
+        <p>Earned alongside the <strong>Graduate Certificate in High-Performance Computing</strong>. Teaching Assistant for <strong>Object-Oriented Programming</strong> and <strong>Parallel Programming</strong>.</p>
         <div class="chip-row">
-          <span class="chip">HPC Certificate</span>
-          <span class="chip">CUDA / OpenMP</span>
-          <span class="chip">Parallel Programming (CSE 822)</span>
-          <span class="chip">Big Data (Hadoop / MapReduce)</span>
-          <span class="chip">Pattern Recognition</span>
+          <span class="chip">CSE 822 Parallel Computing · 4.0</span>
+          <span class="chip">CSE 802 Pattern Recognition · 4.0</span>
+          <span class="chip">CSE 850 Adversarial ML · 4.0</span>
+          <span class="chip">CSE 881 Data Mining · 4.0</span>
         </div>
       </div>
 
@@ -79,48 +94,55 @@ export const CONTENT = {
           <div><span class="role-title">Bachelor of Science, Computer Science</span> · <span class="role-org">Michigan State University</span></div>
           <span class="role-date">Aug 2022 – Apr 2025</span>
         </div>
-        <div class="role-loc">Graduated with Honors · GPA 3.93 · Business Minor · Honors College</div>
+        <div class="role-loc">Degree granted May 2025, <strong>With Honor</strong> · GPA 3.92 · Business Minor · Honors College · 3 years</div>
         <ul>
-          <li>All-Semester <strong>Dean's List</strong> (every semester of the program).</li>
+          <li><strong>Dean's List every semester</strong> of the program.</li>
           <li>Inducted into <strong>Tau Beta Pi</strong> — engineering honor society.</li>
-          <li>Inducted into the <strong>National Society of Scholars</strong>.</li>
+          <li>Took graduate courses while an undergrad — CSE 830 Design &amp; Theory of Algorithms (4.0), CSE 840 Computational Foundations in AI.</li>
           <li><strong>Resident Assistant Leader</strong> during undergrad.</li>
         </ul>
       </div>
 
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Graduate Teaching Assistant</span> · <span class="role-org">Object-Oriented Principles</span></div>
-          <span class="role-date">2025 – Present</span>
+          <div><span class="role-title">Graduate Teaching Assistant</span> · <span class="role-org">OOP &amp; Parallel Programming</span></div>
+          <span class="role-date">Aug 2025 – May 2026</span>
         </div>
         <div class="role-loc">CSE Department · Michigan State University</div>
         <ul>
-          <li>Lead lab sections, grade assignments, hold weekly office hours.</li>
-          <li>Guide students through C++17 projects — stack vs. heap, RAII, polymorphism, design patterns.</li>
+          <li>TA for <strong>Object-Oriented Programming</strong> and <strong>Parallel Programming</strong> — lab sections, grading, weekly office hours.</li>
+          <li>Guide students through C++17 and parallel-computing projects — RAII, design patterns, OpenMP, MPI.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">C++17</span><span class="chip">RAII</span>
-          <span class="chip">Polymorphism</span><span class="chip">Design Patterns</span>
+          <span class="chip">C++17</span><span class="chip">OpenMP</span>
+          <span class="chip">MPI</span><span class="chip">Design Patterns</span>
         </div>
       </div>
 
-      <h3>Graduate &amp; Advanced Coursework</h3>
+      <h3>Coursework — from the official transcript</h3>
       <div class="course-grid">
-        <div class="course-pill"><span class="c">CSE</span>High Performance Computing</div>
-        <div class="course-pill"><span class="c">CSE</span>Parallel Programming</div>
-        <div class="course-pill"><span class="c">CSE</span>Advanced Algorithms</div>
-        <div class="course-pill"><span class="c">CSE</span>Operating Systems</div>
-        <div class="course-pill"><span class="c">CSE</span>Computer Architecture</div>
-        <div class="course-pill"><span class="c">CSE</span>Machine Learning</div>
-        <div class="course-pill"><span class="c">CSE</span>Deep Learning / NLP</div>
-        <div class="course-pill"><span class="c">CSE</span>Database Systems</div>
-        <div class="course-pill"><span class="c">CSE</span>Distributed Systems</div>
-        <div class="course-pill"><span class="c">CSE</span>Object-Oriented Principles</div>
-        <div class="course-pill"><span class="c">CSE</span>Software Engineering</div>
-        <div class="course-pill"><span class="c">MTH</span>Linear Algebra</div>
-        <div class="course-pill"><span class="c">MTH</span>Probability &amp; Statistics</div>
-        <div class="course-pill"><span class="c">MTH</span>Discrete Structures</div>
+        <div class="course-pill"><span class="c">CSE 822</span>Parallel Computing</div>
+        <div class="course-pill"><span class="c">CSE 802</span>Pattern Recognition &amp; Analysis</div>
+        <div class="course-pill"><span class="c">CSE 850</span>Adv Topics in Adversarial ML</div>
+        <div class="course-pill"><span class="c">CSE 881</span>Data Mining</div>
+        <div class="course-pill"><span class="c">CSE 841</span>Artificial Intelligence</div>
+        <div class="course-pill"><span class="c">CSE 842</span>Natural Language Processing</div>
+        <div class="course-pill"><span class="c">CSE 825</span>Computer &amp; Network Security</div>
+        <div class="course-pill"><span class="c">CSE 830</span>Design &amp; Theory of Algorithms</div>
+        <div class="course-pill"><span class="c">CSE 840</span>Comp Foundations in AI</div>
+        <div class="course-pill"><span class="c">CSE 482</span>Big Data Analysis</div>
+        <div class="course-pill"><span class="c">CSE 440</span>Intro to AI</div>
+        <div class="course-pill"><span class="c">CSE 404</span>Intro to Machine Learning</div>
+        <div class="course-pill"><span class="c">CSE 331</span>Algorithms &amp; Data Structures</div>
+        <div class="course-pill"><span class="c">CSE 325</span>Computer Systems</div>
+        <div class="course-pill"><span class="c">CSE 320</span>Computer Org &amp; Architecture</div>
+        <div class="course-pill"><span class="c">CSE 999</span>Doctoral Dissertation Research</div>
       </div>
+
+      <p class="modal-footer-cta">
+        <a class="inline-btn" href="assets/transcript.pdf" download="Atharva_Kirkole_MSU_Transcript.pdf">↓ Official MSU transcript (PDF)</a>
+        <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Resume (PDF)</a>
+      </p>
     `,
   },
 
@@ -135,7 +157,7 @@ export const CONTENT = {
         <div class="stat-card"><p class="k">Honor Society</p><p class="v">National Society of Scholars</p></div>
         <div class="stat-card"><p class="k">Dean's List</p><p class="v">Every Semester</p></div>
         <div class="stat-card"><p class="k">Honors College</p><p class="v">Member</p></div>
-        <div class="stat-card"><p class="k">Graduated</p><p class="v">With Honors, 2025</p></div>
+        <div class="stat-card"><p class="k">Degrees</p><p class="v">B.S. '25 With Honor · M.S. '26</p></div>
       </div>
 
       <h3>🏆 Highest International Student Financial Award</h3>
@@ -158,6 +180,16 @@ export const CONTENT = {
         <li>Presented at the <strong>North American Plant Phenotyping Network (NAPPN) Conference</strong>, Purdue University.</li>
         <li>Abstract published — <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">authorea.com/…/675202</a>.</li>
       </ul>
+
+      <h3>🎓 Certifications</h3>
+      <ul>
+        <li><strong>Graduate Certificate in High-Performance Computing</strong>, Michigan State University.</li>
+        <li><strong>CS50x</strong>, HarvardX (Verified).</li>
+      </ul>
+
+      <p class="modal-footer-cta">
+        <a class="inline-btn" href="assets/transcript.pdf" download="Atharva_Kirkole_MSU_Transcript.pdf">↓ Verify on the official transcript (PDF)</a>
+      </p>
     `,
   },
 
@@ -166,24 +198,44 @@ export const CONTENT = {
     eyebrow: "Work Experience",
     title: "Roles &amp; Impact",
     html: `
+      <!-- SPaRTa Lab -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">High Performance Computing Research Assistant</span> · <span class="role-org">SPaRTa Lab (Scalable Parallel Technologies), MSU</span></div>
+          <span class="role-date">Jun 2026 – Present</span>
+        </div>
+        <div class="role-loc">East Lansing, MI · Doctoral research group</div>
+
+        <ul>
+          <li>Parallelized the <strong>linearized Stokes equation over 10M+ sphere- and ellipsoid-surface points</strong>, simulating rigid bodies in viscous (low-Reynolds) flow — with applications in <strong>red-blood-cell dynamics and drug-discovery modeling</strong>.</li>
+          <li>Built a <strong>CUDA boundary-integral solver reaching 60× speedup</strong> via coalesced memory access and shared-memory tiling.</li>
+          <li>Applied numerical analysis and error-control techniques to n-body interactions, reducing numerical error from <strong>7% to 2%</strong>.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">CUDA</span><span class="chip">Boundary Integral</span>
+          <span class="chip">Stokes Flow</span><span class="chip">Shared-Memory Tiling</span>
+          <span class="chip">Coalesced Access</span><span class="chip">Numerical Analysis</span>
+        </div>
+      </div>
+
       <!-- Heard AI -->
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2026 – Present</span>
+          <span class="role-date">Mar 2026 – Jun 2026</span>
         </div>
         <div class="role-loc">East Lansing, MI · NSF Convergence Accelerator Phase 2 ($5M)</div>
 
         <ul>
-          <li>Contributing to a <strong>$5M NSF Convergence Accelerator (Phase 2)</strong> project on accessible speech AI.</li>
-          <li>Built a full-stack, real-time speech application (Node.js, React, AWS Cloudscape) on a <strong>Claude-based LLM framework</strong> serving <strong>~300 concurrent sessions at &lt;400 ms end-to-end latency</strong>.</li>
-          <li>Developed a personalized per-user fine-tuning pipeline (~4 min/user), improving recognition accuracy <strong>23% (WER ~14% → ~10.8%)</strong> via rapid adaptation.</li>
+          <li>Contributed to a <strong>$5M NSF Convergence Accelerator (Phase 2)</strong> project on accessible speech technologies; developed <strong>speaker diarization and stutter detection models</strong> to identify and classify dysfluent speech patterns.</li>
+          <li>Built the initial <strong>stutter speech synthesis / regeneration pipeline</strong> generating fluent speech alternatives from stuttered input; engineered a full-stack application (Node.js, React, AWS Cloudscape) serving <strong>300 concurrent sessions at &lt;400 ms latency</strong>.</li>
+          <li>Implemented a per-user fine-tuning framework achieving <strong>23% WER improvement (14% → 10.8%)</strong> using rapid adaptation.</li>
         </ul>
         <div class="chip-row">
+          <span class="chip">Speaker Diarization</span><span class="chip">Stutter Detection</span>
           <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
-          <span class="chip">Claude LLM</span>
           <span class="chip">React / Cloudscape</span><span class="chip">Node.js</span>
-          <span class="chip">Accessibility</span><span class="chip">NSF</span>
+          <span class="chip">NSF</span>
         </div>
       </div>
 
@@ -196,9 +248,9 @@ export const CONTENT = {
         <div class="role-loc">Michigan State University · East Lansing, MI</div>
 
         <ul>
-          <li>Led end-to-end migration of the campus web-mapping platform off Google Maps onto a self-managed <strong>ESRI ArcGIS</strong> stack serving <strong>100K+ daily API requests</strong> across <strong>~35K monthly active users</strong>, rebuilding every map surface around custom geospatial layers and cutting mapping/licensing cost <strong>~20% (≈$45K/yr)</strong>.</li>
-          <li>Owned geospatial data modeling for <strong>~12K+ campus location entities/POIs</strong> (buildings, entrances, accessibility nodes); designed layer rendering and an automated ingestion pipeline that cut route-compute latency <strong>~30% (~210 ms → ~145 ms)</strong>.</li>
-          <li>Modernized campus web services (PHP, JavaScript, Docker, custom student-data REST APIs); raised site accessibility from <strong>80% to 99.7%</strong> (WCAG 2.1 / ADA / ARIA) across <strong>~40 production surfaces</strong>.</li>
+          <li>Led end-to-end migration of the campus mapping platform off Google Maps onto a self-managed <strong>ESRI ArcGIS</strong> stack serving <strong>100K+ daily requests</strong>, rebuilding the map surface around custom geospatial layers and cutting licensing cost <strong>~20% (~$45K/yr)</strong>.</li>
+          <li>Owned geospatial data modeling for <strong>~12K+ campus entities/POIs</strong>; built an <strong>automated telemetry ingestion pipeline</strong> processing real-time location signals to drive data-driven route optimization, cutting compute latency <strong>~30% (~210 ms → ~145 ms)</strong>.</li>
+          <li>Engineered <strong>student/people information-system APIs and Dockerized service images</strong> (PHP, JavaScript); raised site accessibility from <strong>80% to 99.7%</strong> (WCAG 2.1 / ADA / ARIA) across <strong>40 production surfaces</strong>.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">ESRI ArcGIS</span><span class="chip">ArcGIS Portal</span>
@@ -211,14 +263,14 @@ export const CONTENT = {
       <!-- Amazon -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">SDE Intern, University Capstone</span> · <span class="role-org">Amazon</span></div>
+          <div><span class="role-title">University Capstone Project</span> · <span class="role-org">Amazon</span></div>
           <span class="role-date">Jan 2025 – May 2025</span>
         </div>
         <div class="role-loc">East Lansing, MI</div>
 
         <ul>
-          <li>Built an AI-powered semantic code-search system over <strong>~1.2M+ internal architecture assets</strong> using <strong>AWS OpenSearch</strong> (Elasticsearch-compatible), Lambda, DynamoDB, and S3.</li>
-          <li>Designed a <strong>RAG-style retrieval pipeline</strong> — dynamically chunked vector embeddings via <strong>Bedrock + SageMaker</strong>, indexed in OpenSearch — at <strong>~90 ms p95</strong>.</li>
+          <li>Built an AI-powered semantic code-search system over <strong>~10k internal architecture assets</strong> using <strong>AWS OpenSearch</strong> (Elasticsearch-compatible), Lambda, DynamoDB, and S3.</li>
+          <li>Designed a <strong>RAG-style retrieval pipeline</strong> — dynamically chunked vector embeddings via <strong>Bedrock + SageMaker</strong>, indexed in OpenSearch — at <strong>~90 ms</strong>.</li>
           <li>Tuned indexing/ranking to lift top-k relevance <strong>~18% (NDCG@10)</strong> and added vector-similarity employee recommendations over GitHub signals.</li>
         </ul>
         <div class="chip-row">
@@ -237,12 +289,13 @@ export const CONTENT = {
         <div class="role-loc">Michigan State University</div>
 
         <ul>
-          <li>Built and evaluated <strong>Random Forest / ML models</strong> (TensorFlow, Python, R) for crop-yield prediction on <strong>120+ dim datasets</strong> at <strong>~72% accuracy</strong>.</li>
+          <li>Built and evaluated <strong>Random Forest / ML models</strong> (TensorFlow, Python, R) for crop-yield prediction, querying <strong>120+ dimensional agronomic datasets from PostgreSQL</strong> with relational joins/aggregations at <strong>~72% accuracy</strong>.</li>
           <li>Presented at the <strong>NAPPN Conference</strong>, Purdue — <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">published abstract</a>.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">Random Forest</span><span class="chip">TensorFlow</span>
-          <span class="chip">Python</span><span class="chip">R</span><span class="chip">Genomics</span>
+          <span class="chip">PostgreSQL</span><span class="chip">Python</span>
+          <span class="chip">R</span><span class="chip">Genomics</span>
         </div>
       </div>
 
@@ -276,18 +329,35 @@ export const CONTENT = {
     eyebrow: "Research",
     title: "AI, HPC &amp; Systems",
     html: `
+      <p>Doctoral research in high-performance computing, plus applied AI research in speech accessibility and computational agronomy.</p>
+
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">HPC Research Assistant</span> · <span class="role-org">SPaRTa Lab (Scalable Parallel Technologies), MSU</span></div>
+          <span class="role-date">Jun 2026 – Present</span>
+        </div>
+        <div class="role-loc">Doctoral research · particulate Stokes flow on GPUs</div>
+
+        <p>Parallelizing the <strong>linearized Stokes equation over 10M+ sphere- and ellipsoid-surface points</strong> to simulate rigid bodies in viscous, low-Reynolds flow — the regime of <strong>red-blood-cell dynamics and drug-discovery modeling</strong>. Built a <strong>CUDA boundary-integral solver reaching 60× speedup</strong> through coalesced memory access and shared-memory tiling, and drove numerical error from <strong>7% down to 2%</strong> with error-control techniques on the n-body interactions.</p>
+        <div class="chip-row">
+          <span class="chip">CUDA</span><span class="chip">Boundary Integral Method</span>
+          <span class="chip">Stokes Flow</span><span class="chip">Shared-Memory Tiling</span>
+          <span class="chip">Error Control</span>
+        </div>
+      </div>
+
       <div class="role">
         <div class="role-head">
           <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2026 – Present</span>
+          <span class="role-date">Mar 2026 – Jun 2026</span>
         </div>
         <div class="role-loc">NSF Convergence Accelerator Phase 2 · $5M</div>
 
-        <p>Working on <strong>accessible speech AI</strong> on a <strong>Claude-based LLM framework</strong> serving <strong>~300 concurrent sessions at &lt;400 ms end-to-end latency</strong>. Built a personalized per-user fine-tuning pipeline (~4 min/user) that lifts recognition accuracy <strong>23% (WER ~14% → ~10.8%)</strong> via rapid adaptation. Full-stack React/Node/Cloudscape tooling drives data collection and inference in real time.</p>
+        <p>Worked on <strong>accessible speech technologies</strong>: built <strong>speaker diarization and stutter detection models</strong> for classifying dysfluent speech, and the initial <strong>stutter speech synthesis / regeneration pipeline</strong> that generates fluent alternatives from stuttered input. Per-user fine-tuning framework lifted recognition accuracy <strong>23% (WER 14% → 10.8%)</strong>; the full-stack app served <strong>300 concurrent sessions at &lt;400 ms latency</strong>.</p>
         <div class="chip-row">
+          <span class="chip">Speaker Diarization</span><span class="chip">Stutter Detection</span>
           <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
-          <span class="chip">Claude LLM</span>
-          <span class="chip">Accessibility</span><span class="chip">NSF</span>
+          <span class="chip">NSF</span>
         </div>
       </div>
 
@@ -307,10 +377,10 @@ export const CONTENT = {
         </div>
       </div>
 
-      <h3>HPC coursework &amp; research interests</h3>
-      <p>The HPC Graduate Certificate is letting me go deeper on the <em>systems</em> side of AI: <strong>attention-kernel optimization</strong> (CUDA / OpenMP / SIMD / cache-aware tiling), <strong>tensor-core GEMM</strong> with PTX intrinsics (<code>mma.sync.m16n8k8</code>, TF32, padded shared memory), distributed training, memory-hierarchy-aware algorithm design, and WebGPU as a vehicle for browser-native HPC (this site being exhibit A).</p>
+      <h3>HPC toolkit &amp; research interests</h3>
+      <p>Graduate Certificate in High-Performance Computing + CSE 822 Parallel Computing (4.0) underpin the systems side: <strong>attention-kernel optimization</strong> (CUDA / OpenMP / AVX2, cache-aware tiling, online softmax), <strong>MPI at scale</strong> (non-blocking Isend/Irecv overlap, one-sided RMA over 100M+ elements/rank), memory-hierarchy-aware algorithm design, and <strong>WebGPU as browser-native HPC</strong> — the ocean behind this page is my open-source <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">ocean-webgpu</a> library running a shared-memory tiled stencil kernel.</p>
       <div class="chip-row">
-        <span class="chip">CUDA</span><span class="chip">PTX / mma.sync</span>
+        <span class="chip">CUDA</span><span class="chip">MPI / RMA</span>
         <span class="chip">OpenMP</span><span class="chip">AVX2 / FMA</span>
         <span class="chip">Cache Tiling</span><span class="chip">WebGPU / WGSL</span>
       </div>
@@ -322,6 +392,31 @@ export const CONTENT = {
     eyebrow: "Projects",
     title: "Selected Work",
     html: `
+      <p>The flagship is the ocean you're looking at — an open-source GPU library — followed by kernel-level HPC work and applied ML systems.</p>
+
+      <!-- ocean-webgpu — flagship -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">ocean-webgpu — Open-Source GPU Wave-Simulation Library</span> · <span class="role-org">WebGPU · WGSL · WebGL2</span></div>
+          <span class="role-date">2026 · MIT</span>
+        </div>
+        <div class="role-loc">Zero-dependency ES modules · powering this page right now</div>
+
+        <ul>
+          <li>Solves the 2D wave-equation PDE (∂²u/∂t² = c²∇²u) with a <strong>WGSL compute kernel</strong> — CFL-stable Verlet integration on ping-pong <code>rgba16float</code> textures, <strong>one GPU thread per grid cell</strong>.</li>
+          <li><strong>Cooperative shared-memory tiling:</strong> each 16×16 workgroup stages an 18×18 haloed tile into on-chip <code>var&lt;workgroup&gt;</code> memory behind a <code>workgroupBarrier()</code>, then runs the 5-point stencil from shared memory — the same <code>__shared__</code> halo-tile pattern as CUDA stencil solvers, cutting redundant global loads ~3×.</li>
+          <li>On this page: <strong>~380K threads per step across ~1.5K workgroups</strong>, two sub-steps per frame ≈ <strong>45M cell-updates/sec</strong> at 60 fps. The bundled stress lab scales the same kernels to <strong>16.8M cells (4096²) with 512 moving sources</strong> and live GFLOP/s + bandwidth readouts.</li>
+          <li>Transparent <strong>WebGL2 fragment-shader fallback</strong> (RGBA16F ping-pong) for browsers without WebGPU; a CPU-side analytical superposition keeps the floating icons phase-locked to the GPU surface with <strong>zero readback</strong>.</li>
+          <li>Open source: <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">github.com/AtharvaKirkole/ocean-webgpu</a> — <a href="https://atharvakirkole.github.io/ocean-webgpu/" target="_blank" rel="noopener">live demo</a> · <a href="https://atharvakirkole.github.io/ocean-webgpu/stress.html" target="_blank" rel="noopener">stress lab</a>.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">WebGPU</span><span class="chip">WGSL</span>
+          <span class="chip">Shared-Memory Tiling</span><span class="chip">workgroupBarrier</span>
+          <span class="chip">Ping-Pong Textures</span><span class="chip">CFL / Verlet</span>
+          <span class="chip">WebGL2 Fallback</span><span class="chip">MIT</span>
+        </div>
+      </div>
+
       <!-- FitTrack -->
       <div class="role">
         <div class="role-head">
@@ -330,7 +425,8 @@ export const CONTENT = {
         </div>
 
         <ul>
-          <li>Fitness app that ingests <strong>live time-series data</strong> from wearable devices (heart rate, accelerometer, motion signals), visualizing streaming metrics on a real-time dashboard at <strong>~50 Hz sampling</strong>.</li>
+          <li>Real-time fitness analytics platform processing <strong>high-volume wearable sensor streams (~50 Hz)</strong> — heart rate, accelerometer, motion signals.</li>
+          <li>Implemented <strong>streaming data pipelines, time-series SQL storage, and a live metrics dashboard</strong>.</li>
           <li>Trained ML models predicting <strong>age, gender, BMI, and body-fat %</strong> from sensor signals — <strong>~88% accuracy</strong>, <strong>~3.5% MAE</strong> on body-fat regression across <strong>~1.5M sample windows</strong>.</li>
         </ul>
         <div class="chip-row">
@@ -360,6 +456,25 @@ export const CONTENT = {
         </div>
       </div>
 
+      <!-- Distributed Systems (MPI) -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">Distributed Systems (MPI)</span> · <span class="role-org">Masters Parallel Computing Course · 4.0</span></div>
+          <span class="role-date">Jan 2026</span>
+        </div>
+
+        <ul>
+          <li><strong>Latency hiding:</strong> overlapped non-blocking communication (<code>MPI_Isend</code> / <code>MPI_Irecv</code>) with stencil computation.</li>
+          <li><strong>One-sided RMA:</strong> <code>MPI_Win</code> / <code>MPI_Get</code> for direct remote-array access — measurable gains on <strong>100M+ elements per rank</strong>.</li>
+          <li><strong>Custom datatypes &amp; topology:</strong> <code>MPI_Type_create_struct</code> with <code>offsetof</code> for efficient <code>MPI_Gather</code>; subcommunicators via <code>MPI_Comm_split</code>.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">MPI</span><span class="chip">Isend / Irecv</span>
+          <span class="chip">One-Sided RMA</span><span class="chip">Derived Datatypes</span>
+          <span class="chip">Subcommunicators</span>
+        </div>
+      </div>
+
       <!-- Tensor-Core GEMM -->
       <div class="role">
         <div class="role-head">
@@ -376,27 +491,6 @@ export const CONTENT = {
           <span class="chip">CUDA</span><span class="chip">PTX</span>
           <span class="chip">mma.sync.m16n8k8</span><span class="chip">TF32</span>
           <span class="chip">Bank Conflicts</span><span class="chip">HBM Coalescing</span>
-        </div>
-      </div>
-
-      <!-- ocean-webgpu / This site -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">ocean-webgpu — Real-Time GPU Wave-Equation Library</span> · <span class="role-org">WebGPU · WGSL · GLSL</span></div>
-          <span class="role-date">2026</span>
-        </div>
-
-        <ul>
-          <li>2D wave-equation PDE as a <strong>WGSL compute shader</strong> — ping-pong <code>rgba16float</code> textures, CFL-stable Verlet integration.</li>
-          <li>Second kernel uses cooperative <strong><code>var&lt;workgroup&gt;</code> shared-memory tiling</strong> — the same pattern as the <code>__shared__</code> halo-tile trick in CUDA stencil codes.</li>
-          <li>Icons are displaced on the CPU using analytical ripple superposition, so the DOM bobs in sync with the GPU ocean — no readback.</li>
-          <li>Full <strong>WebGL2 fragment-shader fallback</strong> on <code>RGBA16F</code> for browsers without WebGPU.</li>
-          <li>Extracted as a standalone zero-dependency library (this site is exhibit A).</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">WebGPU</span><span class="chip">WGSL</span>
-          <span class="chip">WebGL2 / GLSL</span><span class="chip">PDE</span>
-          <span class="chip">Shared-Memory Tiling</span><span class="chip">CFL</span>
         </div>
       </div>
 
@@ -532,17 +626,18 @@ export const CONTENT = {
         <div class="contact-row static">
           <span class="contact-ico">🎓</span>
           <span class="contact-text">
-            <span class="contact-k">Graduation</span>
-            <span class="contact-v">December 2026</span>
+            <span class="contact-k">Status</span>
+            <span class="contact-v">B.S. '25 · M.S. '26 · Ph.D. in progress</span>
           </span>
         </div>
       </div>
 
       <h4>Interests</h4>
-      <p>HPC &amp; parallel systems · GPU compute &amp; CUDA · compilers and runtimes · AI infrastructure &amp; RAG · systems for accessibility.</p>
+      <p>HPC &amp; parallel systems · GPU compute &amp; CUDA · MPI at scale · AI infrastructure &amp; RAG · geospatial systems · systems for accessibility.</p>
 
       <p class="modal-footer-cta">
-        <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Download resume (PDF)</a>
+        <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Resume (PDF)</a>
+        <a class="inline-btn" href="assets/transcript.pdf" download="Atharva_Kirkole_MSU_Transcript.pdf">↓ Official transcript (PDF)</a>
       </p>
     `,
   },

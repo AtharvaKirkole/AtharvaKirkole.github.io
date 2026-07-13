@@ -1,10 +1,17 @@
 // ============================================================
-// ocean.js
+// ocean.js  ·  powered by the ocean-webgpu library
+// github.com/AtharvaKirkole/ocean-webgpu
+//
 // GPU wave-equation simulation.
 //   ∂²u/∂t² = c² ∇²u    (discrete, 2D, absorbing boundaries)
 //
-// Primary backend: WebGPU compute shader + render pipeline
-// Fallback backend: WebGL2 fragment-shader ping-pong
+// Primary backend: WebGPU compute pipeline using a cooperative
+//   shared-memory tiled kernel — every 16×16 workgroup stages an
+//   18×18 haloed tile into on-chip var<workgroup> memory behind a
+//   workgroupBarrier(), then runs the 5-point stencil entirely out
+//   of shared memory (the same __shared__ halo-tile pattern used in
+//   CUDA stencil solvers). One GPU thread per grid cell.
+// Fallback backend: WebGL2 fragment-shader ping-pong.
 //
 // Both backends consume the same RippleField source list each
 // frame (mouse trail + click splashes), so the image and the
@@ -12,10 +19,14 @@
 // ============================================================
 
 const MAX_SOURCES_PER_FRAME = 24;
-const GRID_CELLS_TARGET = 512 * 512;
-const GRID_MAX_DIM = 768;
+const GRID_CELLS_TARGET = 600 * 600;
+const GRID_MAX_DIM = 1024;
 const COURANT2 = 0.30;   // (c·dt/dx)^2 — must be < 0.5 for 2D stability
 const DAMPING = 0.0012;
+
+// Compute-kernel geometry: 16×16 = 256 threads per workgroup.
+const TILE_W = 16;
+const THREADS_PER_WG = TILE_W * TILE_W;
 
 /* --------------------------------------------------------------------------
  * WGSL SHADERS
@@ -43,51 +54,88 @@ struct Source {
 @group(0) @binding(2) var<uniform>         params  : Params;
 @group(0) @binding(3) var<storage, read>   sources : array<Source>;
 
-@compute @workgroup_size(8, 8)
-fn main(@builtin(global_invocation_id) gid : vec3<u32>) {
-  let x = i32(gid.x);
-  let y = i32(gid.y);
+const TILE_W : u32 = 16u;   // main tile edge (= workgroup edge)
+const HALO   : u32 = 1u;    // 5-point stencil needs a 1-cell halo
+const TS     : u32 = 18u;   // staged tile edge = TILE_W + 2*HALO
+
+// Cooperative on-chip tile: (u_current, u_previous) packed per cell.
+// 18×18 = 324 slots × 8 bytes = 2.5 KB of workgroup shared memory.
+var<workgroup> tile : array<vec2<f32>, 324>;
+
+// Clamp-to-edge load — matches the absorbing-boundary behaviour of the
+// naive kernel (the edge mask crushes amplitude near borders anyway).
+fn loadClamped(x : i32, y : i32, W : i32, H : i32) -> vec2<f32> {
+  let cx = clamp(x, 0, W - 1);
+  let cy = clamp(y, 0, H - 1);
+  let c = textureLoad(inTex, vec2<i32>(cx, cy), 0);
+  return vec2<f32>(c.r, c.g);
+}
+
+@compute @workgroup_size(16, 16)
+fn main(@builtin(global_invocation_id) gid : vec3<u32>,
+        @builtin(local_invocation_id)  lid : vec3<u32>,
+        @builtin(workgroup_id)         wid : vec3<u32>) {
   let W = i32(params.resolution.x);
   let H = i32(params.resolution.y);
+
+  // ---- Stage 1: 256 threads cooperatively stage the 18×18 haloed tile
+  // into shared memory (324 cells → at most 2 loads per thread). Each
+  // neighbour value is then read from on-chip memory instead of being
+  // re-fetched from the texture by 4 different threads.
+  let tileX0 = i32(wid.x * TILE_W) - i32(HALO);
+  let tileY0 = i32(wid.y * TILE_W) - i32(HALO);
+  let tid = lid.y * TILE_W + lid.x;
+
+  // Fixed 2-iteration loop (324 cells / 256 threads) keeps control flow
+  // uniform for the barrier below; the guard inside reconverges.
+  for (var j : u32 = 0u; j < 2u; j = j + 1u) {
+    let idx = tid + j * 256u;
+    if (idx < 324u) {
+      let dy = idx / TS;
+      let dx = idx - dy * TS;
+      tile[idx] = loadClamped(tileX0 + i32(dx), tileY0 + i32(dy), W, H);
+    }
+  }
+  workgroupBarrier();
+
+  // ---- Stage 2: 5-point stencil + Verlet step, served from shared memory.
+  let x = i32(gid.x);
+  let y = i32(gid.y);
   if (x >= W || y >= H) { return; }
 
-  let c  = textureLoad(inTex, vec2<i32>(x, y), 0);
-  let u  = c.r;
-  let up = c.g;
-
-  let xm = max(x - 1, 0);
-  let xp = min(x + 1, W - 1);
-  let ym = max(y - 1, 0);
-  let yp = min(y + 1, H - 1);
-
-  let uL = textureLoad(inTex, vec2<i32>(xm, y ), 0).r;
-  let uR = textureLoad(inTex, vec2<i32>(xp, y ), 0).r;
-  let uD = textureLoad(inTex, vec2<i32>(x , ym), 0).r;
-  let uU = textureLoad(inTex, vec2<i32>(x , yp), 0).r;
+  let sx = lid.x + HALO;
+  let sy = lid.y + HALO;
+  let me = tile[sy * TS + sx];
+  let u  = me.x;
+  let up = me.y;
+  let uL = tile[sy * TS + sx - 1u].x;
+  let uR = tile[sy * TS + sx + 1u].x;
+  let uD = tile[(sy - 1u) * TS + sx].x;
+  let uU = tile[(sy + 1u) * TS + sx].x;
 
   let lap = uL + uR + uD + uU - 4.0 * u;
   var n   = 2.0 * u - up + params.courant2 * lap;
   n = n * (1.0 - params.damping);
 
-  // Inject mouse sources (Gaussian bumps).
+  // Inject mouse sources (Gaussian bumps, broadcast via uniform cache).
   let p = vec2<f32>(f32(x), f32(y));
-  var i : u32 = 0u;
+  var k : u32 = 0u;
   loop {
-    if (i >= params.srcCount) { break; }
-    let s = sources[i];
+    if (k >= params.srcCount) { break; }
+    let s = sources[k];
     let d = p - s.pos;
     let r2 = dot(d, d);
     let g = exp(-r2 / max(2.0 * s.radius * s.radius, 1e-3));
     n = n + s.amp * g;
-    i = i + 1u;
+    k = k + 1u;
   }
 
   // Absorbing boundary — taper the new amplitude to 0 near edges.
   let fx = f32(min(x, W - 1 - x));
   let fy = f32(min(y, H - 1 - y));
   let edge = 10.0;
-  let k = smoothstep(0.0, edge, min(fx, fy));
-  n = n * k;
+  let mask = smoothstep(0.0, edge, min(fx, fy));
+  n = n * mask;
 
   textureStore(outTex, vec2<i32>(x, y), vec4<f32>(n, u, 0.0, 1.0));
 }
@@ -261,9 +309,9 @@ class OceanWebGPU {
     let H = Math.round(GRID_CELLS_TARGET / W);
     W = Math.min(GRID_MAX_DIM, Math.max(96, W));
     H = Math.min(GRID_MAX_DIM, Math.max(96, H));
-    // round to multiple of 8 for workgroup alignment
-    this.gridW = Math.ceil(W / 8) * 8;
-    this.gridH = Math.ceil(H / 8) * 8;
+    // round to multiple of TILE_W so every workgroup owns a full tile
+    this.gridW = Math.ceil(W / TILE_W) * TILE_W;
+    this.gridH = Math.ceil(H / TILE_W) * TILE_W;
   }
 
   _allocateStateTextures() {
@@ -365,7 +413,7 @@ class OceanWebGPU {
     const pass = enc.beginComputePass();
     pass.setPipeline(this.computePipeline);
     pass.setBindGroup(0, bindGroup);
-    pass.dispatchWorkgroups(this.gridW / 8, this.gridH / 8);
+    pass.dispatchWorkgroups(this.gridW / TILE_W, this.gridH / TILE_W);
     pass.end();
     this.device.queue.submit([enc.finish()]);
 
@@ -408,6 +456,8 @@ class OceanWebGPU {
   }
 
   get cells() { return this.gridW * this.gridH; }
+  get workgroups() { return (this.gridW / TILE_W) * (this.gridH / TILE_W); }
+  get threadsPerWorkgroup() { return THREADS_PER_WG; }
 }
 
 /* --------------------------------------------------------------------------
@@ -714,7 +764,7 @@ export async function createOcean(canvas, ripples, onStatus) {
       onStatus?.("Requesting WebGPU adapter");
       const ocean = new OceanWebGPU(canvas, ripples);
       await ocean.init();
-      onStatus?.("Compiled WGSL step + render pipelines");
+      onStatus?.("Compiled 16×16 shared-memory tiled WGSL pipelines");
       return ocean;
     } catch (err) {
       console.warn("WebGPU init failed, falling back to WebGL2:", err);
