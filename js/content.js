@@ -436,6 +436,26 @@ export const CONTENT = {
         </div>
       </div>
 
+      <!-- MyHouse + MyPro -->
+      <div class="role">
+        <div class="role-head">
+          <div><span class="role-title">MyHouse + MyPro — Two-Sided Home-Services Platform</span> · <span class="role-org">React · Node.js / Express</span></div>
+          <span class="role-date">2025</span>
+        </div>
+
+        <ul>
+          <li>A <strong>two-sided home-services platform</strong>, not just a repair-booking app. Consumer side (<strong>MyHouse</strong>) and provider side (<strong>MyPro</strong>) share one backend and one data model.</li>
+          <li><strong>MyHouse:</strong> every home gets a persistent digital record — an interactive <strong>2D/3D "digital twin"</strong> of rooms and appliances, a <strong>warranty vault</strong> with auto-expiry reminders, and a full maintenance/repair history that accumulates over time instead of being overwritten.</li>
+          <li><strong>MyPro:</strong> contractors get a <strong>job feed, bidding tools, route/schedule views, and performance analytics</strong>.</li>
+          <li>Both apps run on one shared <strong>Node.js/Express</strong> backend, so every completed repair feeds back into a <strong>knowledge graph</strong> that improves future contractor matching, repair-cost predictions, and maintenance forecasting for that same household.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">React</span><span class="chip">Node.js / Express</span>
+          <span class="chip">Digital Twin</span><span class="chip">Knowledge Graph</span>
+          <span class="chip">Contractor Matching</span><span class="chip">Warranty Tracking</span>
+        </div>
+      </div>
+
       <!-- NanoGPT HPC -->
       <div class="role">
         <div class="role-head">

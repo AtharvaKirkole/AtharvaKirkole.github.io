@@ -49,15 +49,14 @@ function setSize() {
     badgeName.textContent = ocean.backend;
     cellsEl.textContent = ocean.cells.toLocaleString();
     if (ocean.workgroups) {
-      // One GPU thread per cell — surface the dispatch geometry so the
-      // parallelism is visible, not implied.
       wgInfoEl.textContent =
         `${ocean.workgroups.toLocaleString()} workgroups × ${ocean.threadsPerWorkgroup} threads`;
     } else {
       wgSepEl?.remove();
       wgInfoEl?.remove();
     }
-    badge.classList.remove("hidden");
+    // Backend/FPS/cell-count badge stays intentionally hidden (dev telemetry,
+    // not user-facing) — kept populated in case it's re-enabled later.
 
     // Seed a gentle initial ripple so the ocean isn't completely still
     // while the user gets their bearings.
