@@ -397,24 +397,29 @@ export const CONTENT = {
       <!-- ocean-webgpu — flagship -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">ocean-webgpu — Open-Source GPU Wave-Simulation Library</span> · <span class="role-org">WebGPU · WGSL · WebGL2</span></div>
+          <div><span class="role-title">ocean-webgpu — Open-Source GPU Wave-Simulation Library + API</span> · <span class="role-org">WebGPU · WGSL · WebGL2</span></div>
           <span class="role-date">2026 · MIT</span>
         </div>
-        <div class="role-loc">Zero-dependency ES modules · powering this page right now</div>
+        <div class="role-loc">Zero-dependency ES modules · a one-call embeddable API · powering this page right now</div>
 
         <ul>
           <li>Solves the 2D wave-equation PDE (∂²u/∂t² = c²∇²u) with a <strong>WGSL compute kernel</strong> — CFL-stable Verlet integration on ping-pong <code>rgba16float</code> textures, <strong>one GPU thread per grid cell</strong>.</li>
           <li><strong>Cooperative shared-memory tiling:</strong> each 16×16 workgroup stages an 18×18 haloed tile into on-chip <code>var&lt;workgroup&gt;</code> memory behind a <code>workgroupBarrier()</code>, then runs the 5-point stencil from shared memory — the same <code>__shared__</code> halo-tile pattern as CUDA stencil solvers, cutting redundant global loads ~3×.</li>
+          <li><strong>Public one-call API:</strong> <code>Ocean.mount("#canvas", { palette, waveSpeed, foam, caustics, lighting, autoRain })</code> handles the render loop, pointer input, resize, and WebGPU→WebGL2 fallback. Everything is live-tunable (<code>set()</code>, <code>setPalette()</code>, <code>splash()</code>, <code>snapshot()</code>) with 10 built-in themes + arbitrary custom palettes.</li>
+          <li><strong>Interactive playground</strong> with colour pickers, physics sliders, and a <strong>copy-paste embed-code generator</strong> — anyone can theme the ocean and drop it into their own site in three lines.</li>
           <li>On this page: <strong>~380K threads per step across ~1.5K workgroups</strong>, two sub-steps per frame ≈ <strong>45M cell-updates/sec</strong> at 60 fps. The bundled stress lab scales the same kernels to <strong>16.8M cells (4096²) with 512 moving sources</strong> and live GFLOP/s + bandwidth readouts.</li>
-          <li>Transparent <strong>WebGL2 fragment-shader fallback</strong> (RGBA16F ping-pong) for browsers without WebGPU; a CPU-side analytical superposition keeps the floating icons phase-locked to the GPU surface with <strong>zero readback</strong>.</li>
-          <li>Open source: <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">github.com/AtharvaKirkole/ocean-webgpu</a> — <a href="https://atharvakirkole.github.io/ocean-webgpu/" target="_blank" rel="noopener">live demo</a> · <a href="https://atharvakirkole.github.io/ocean-webgpu/stress.html" target="_blank" rel="noopener">stress lab</a>.</li>
+          <li>Open source: <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/AtharvaKirkole/ocean-webgpu#api" target="_blank" rel="noopener">API docs</a> — <a href="https://atharvakirkole.github.io/ocean-webgpu/playground.html" target="_blank" rel="noopener">playground</a> · <a href="https://atharvakirkole.github.io/ocean-webgpu/" target="_blank" rel="noopener">live demo</a> · <a href="https://atharvakirkole.github.io/ocean-webgpu/stress.html" target="_blank" rel="noopener">stress lab</a>.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">WebGPU</span><span class="chip">WGSL</span>
           <span class="chip">Shared-Memory Tiling</span><span class="chip">workgroupBarrier</span>
-          <span class="chip">Ping-Pong Textures</span><span class="chip">CFL / Verlet</span>
+          <span class="chip">Embeddable API</span><span class="chip">10 Themes</span>
           <span class="chip">WebGL2 Fallback</span><span class="chip">MIT</span>
         </div>
+        <p class="modal-footer-cta" style="margin-top:12px;">
+          <a class="inline-btn" href="https://atharvakirkole.github.io/ocean-webgpu/playground.html" target="_blank" rel="noopener">🎛 Try the playground →</a>
+          <a class="inline-btn" href="https://github.com/AtharvaKirkole/ocean-webgpu#api" target="_blank" rel="noopener">Read the API docs →</a>
+        </p>
       </div>
 
       <!-- FitTrack -->
