@@ -198,44 +198,27 @@ export const CONTENT = {
     eyebrow: "Work Experience",
     title: "Roles &amp; Impact",
     html: `
-      <!-- SPaRTa Lab -->
+      <!-- MSU Research — NeMO + Speech AI -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">High Performance Computing Research Assistant</span> · <span class="role-org">SPaRTa Lab (Scalable Parallel Technologies), MSU</span></div>
-          <span class="role-date">Jun 2026 – Present</span>
+          <div><span class="role-title">Machine Learning Researcher — Speech AI, Scientific ML &amp; HPC</span> · <span class="role-org">Michigan State University</span></div>
+          <span class="role-date">Feb 2026 – Present</span>
         </div>
-        <div class="role-loc">East Lansing, MI · Doctoral research group</div>
+        <div class="role-loc">East Lansing, MI</div>
 
         <ul>
-          <li>Parallelized the <strong>linearized Stokes equation over 10M+ sphere- and ellipsoid-surface points</strong>, simulating rigid bodies in viscous (low-Reynolds) flow — with applications in <strong>red-blood-cell dynamics and drug-discovery modeling</strong>.</li>
-          <li>Built a <strong>CUDA boundary-integral solver reaching 60× speedup</strong> via coalesced memory access and shared-memory tiling.</li>
-          <li>Applied numerical analysis and error-control techniques to n-body interactions, reducing numerical error from <strong>7% to 2%</strong>.</li>
+          <li><strong>Neural Mobility Operator (NeMO)</strong> — learned surrogate for the dense operator mapping forces and torques to velocities for N rigid particles in Stokes flow, replacing an <strong>O(N²)–O(N³) boundary-element solve</strong>; analytic far field plus PyTorch/CUDA-learned near-field lubrication and many-body corrections. Cut velocity error <strong>12.8% → 2.5%</strong>.</li>
+          <li>Extended the learned operator's output basis from 5 rotation-invariant coefficients on a single pooled direction to a <strong>17-term O(3)-equivariant tensor basis</strong> on a DeepSet encoder.</li>
+          <li>Co-developed a <strong>warp-specialized producer–consumer CUDA model</strong> (one traversal warp, 15 consumer warps for M2P/P2P off a lock-free shared-memory ring); cut 32 serialized atomics to one per warp, sustaining <strong>87.7% lane utilization</strong>, and parallelized the upward pass bottom-up via <strong>LBVH</strong>.</li>
+          <li><strong>Speech AI (Heard AI / NSF):</strong> contributed to a <strong>$5M NSF Convergence Accelerator (Phase 2)</strong> project on accessible speech; built <strong>speaker diarization and stutter-detection</strong> models segmenting multi-speaker audio and classifying dysfluent patterns from raw waveforms.</li>
+          <li>Engineered a <strong>stutter speech synthesis / regeneration pipeline</strong> (React, Django, Flask) sustaining <strong>300 concurrent sessions at ~400 ms latency</strong> via async inference queues and streaming audio transport.</li>
+          <li>Implemented a <strong>per-user fine-tuning framework</strong> with rapid low-data speaker adaptation, cutting <strong>word error rate 23% (14% → 10.8%)</strong>.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">CUDA</span><span class="chip">Boundary Integral</span>
-          <span class="chip">Stokes Flow</span><span class="chip">Shared-Memory Tiling</span>
-          <span class="chip">Coalesced Access</span><span class="chip">Numerical Analysis</span>
-        </div>
-      </div>
-
-      <!-- Heard AI -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2026 – Jun 2026</span>
-        </div>
-        <div class="role-loc">East Lansing, MI · NSF Convergence Accelerator Phase 2 ($5M)</div>
-
-        <ul>
-          <li>Contributed to a <strong>$5M NSF Convergence Accelerator (Phase 2)</strong> project on accessible speech technologies; developed <strong>speaker diarization and stutter detection models</strong> to identify and classify dysfluent speech patterns.</li>
-          <li>Built the initial <strong>stutter speech synthesis / regeneration pipeline</strong> generating fluent speech alternatives from stuttered input; engineered a full-stack application (Node.js, React, AWS Cloudscape) serving <strong>300 concurrent sessions at &lt;400 ms latency</strong>.</li>
-          <li>Implemented a per-user fine-tuning framework achieving <strong>23% WER improvement (14% → 10.8%)</strong> using rapid adaptation.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">Speaker Diarization</span><span class="chip">Stutter Detection</span>
-          <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
-          <span class="chip">React / Cloudscape</span><span class="chip">Node.js</span>
-          <span class="chip">NSF</span>
+          <span class="chip">CUDA</span><span class="chip">PyTorch</span>
+          <span class="chip">Equivariant ML</span><span class="chip">FMM / LBVH</span>
+          <span class="chip">Stokes Flow</span><span class="chip">Speaker Diarization</span>
+          <span class="chip">Speech Synthesis</span><span class="chip">NSF</span>
         </div>
       </div>
 
@@ -249,13 +232,14 @@ export const CONTENT = {
 
         <ul>
           <li>Led end-to-end migration of the campus mapping platform off Google Maps onto a self-managed <strong>ESRI ArcGIS</strong> stack serving <strong>100K+ daily requests</strong>, rebuilding the map surface around custom geospatial layers and cutting licensing cost <strong>~20% (~$45K/yr)</strong>.</li>
-          <li>Owned geospatial data modeling for <strong>~12K+ campus entities/POIs</strong>; built an <strong>automated telemetry ingestion pipeline</strong> processing real-time location signals to drive data-driven route optimization, cutting compute latency <strong>~30% (~210 ms → ~145 ms)</strong>.</li>
+          <li>Owned geospatial data modeling for <strong>~1.2K+ campus entities/POIs</strong>.</li>
           <li>Engineered <strong>student/people information-system APIs and Dockerized service images</strong> (PHP, JavaScript); raised site accessibility from <strong>80% to 99.7%</strong> (WCAG 2.1 / ADA / ARIA) across <strong>40 production surfaces</strong>.</li>
+          <li>Built an interactive browser-based <strong>malaria transmission simulator</strong> in modular ES6 JavaScript — a vector–host compartment model with client-side numerical integration, parameter controls, and live plotting.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">ESRI ArcGIS</span><span class="chip">ArcGIS Portal</span>
-          <span class="chip">Geospatial Modeling</span><span class="chip">A* Routing</span>
-          <span class="chip">PHP</span><span class="chip">Docker</span>
+          <span class="chip">Geospatial Modeling</span><span class="chip">PHP</span>
+          <span class="chip">JavaScript</span><span class="chip">Docker</span>
           <span class="chip">REST APIs</span><span class="chip">Accessibility</span>
         </div>
       </div>
@@ -269,52 +253,13 @@ export const CONTENT = {
         <div class="role-loc">East Lansing, MI</div>
 
         <ul>
-          <li>Built an AI-powered semantic code-search system over <strong>~10k internal architecture assets</strong> using <strong>AWS OpenSearch</strong> (Elasticsearch-compatible), Lambda, DynamoDB, and S3.</li>
-          <li>Designed a <strong>RAG-style retrieval pipeline</strong> — dynamically chunked vector embeddings via <strong>Bedrock + SageMaker</strong>, indexed in OpenSearch — at <strong>~90 ms</strong>.</li>
-          <li>Tuned indexing/ranking to lift top-k relevance <strong>~18% (NDCG@10)</strong> and added vector-similarity employee recommendations over GitHub signals.</li>
+          <li>Built an AI-powered semantic code-search system over <strong>~10k internal architecture assets</strong> on <strong>AWS OpenSearch</strong> (Elasticsearch-compatible), Lambda, DynamoDB, and S3 — exposed through an <strong>API Gateway + Lambda REST layer</strong> with FastAPI and Flask inference services and a React search UI backed by Node.js.</li>
+          <li>Designed a <strong>RAG-style retrieval pipeline</strong> (dynamically chunked vector embeddings via Bedrock + SageMaker, indexed in OpenSearch); tuned indexing/ranking to lift top-k relevance <strong>~18%</strong>, added vector-similarity employee recommendations over GitHub signals, and containerized the FastAPI services with Docker.</li>
         </ul>
         <div class="chip-row">
           <span class="chip">AWS</span><span class="chip">Bedrock</span><span class="chip">SageMaker</span>
           <span class="chip">OpenSearch</span><span class="chip">RAG</span>
-          <span class="chip">NDCG@10</span><span class="chip">Vector Search</span>
-        </div>
-      </div>
-
-      <!-- Thompson Lab -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">Machine Learning Research Intern</span> · <span class="role-org">Thompson Maize Lab</span></div>
-          <span class="role-date">Aug 2023 – May 2024</span>
-        </div>
-        <div class="role-loc">Michigan State University</div>
-
-        <ul>
-          <li>Built and evaluated <strong>Random Forest / ML models</strong> (TensorFlow, Python, R) for crop-yield prediction, querying <strong>120+ dimensional agronomic datasets from PostgreSQL</strong> with relational joins/aggregations at <strong>~72% accuracy</strong>.</li>
-          <li>Presented at the <strong>NAPPN Conference</strong>, Purdue — <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">published abstract</a>.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">Random Forest</span><span class="chip">TensorFlow</span>
-          <span class="chip">PostgreSQL</span><span class="chip">Python</span>
-          <span class="chip">R</span><span class="chip">Genomics</span>
-        </div>
-      </div>
-
-      <!-- RA Leader -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">Resident Assistant Leader</span> · <span class="role-org">MSU Residence Education &amp; Housing</span></div>
-          <span class="role-date">During Undergrad</span>
-        </div>
-        <div class="role-loc">Michigan State University · East Lansing, MI</div>
-      
-        <ul>
-          <li>Led a floor of residents; ran community-building programs and on-call duty rotations.</li>
-          <li>Coordinated with RD staff on crisis response, mental-health referrals, and overnight incident response.</li>
-          <li>Advanced to <strong>RA Leader</strong> — mentored first-year RAs and reviewed programming plans.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">Leadership</span><span class="chip">Crisis Response</span>
-          <span class="chip">Mentorship</span><span class="chip">Event Programming</span>
+          <span class="chip">FastAPI</span><span class="chip">Docker</span>
         </div>
       </div>
 
@@ -329,31 +274,31 @@ export const CONTENT = {
     eyebrow: "Research",
     title: "AI, HPC &amp; Systems",
     html: `
-      <p>Doctoral research in high-performance computing, plus applied AI research in speech accessibility and computational agronomy.</p>
+      <p>My research sits at the intersection of <strong>scientific machine learning</strong> and <strong>high-performance computing</strong>, with applied work in speech accessibility.</p>
 
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">HPC Research Assistant</span> · <span class="role-org">SPaRTa Lab (Scalable Parallel Technologies), MSU</span></div>
-          <span class="role-date">Jun 2026 – Present</span>
+          <div><span class="role-title">Neural Mobility Operator (NeMO) — Scientific ML for Stokes Flow</span> · <span class="role-org">Michigan State University</span></div>
+          <span class="role-date">2026 – Present</span>
         </div>
-        <div class="role-loc">Doctoral research · particulate Stokes flow on GPUs</div>
+        <div class="role-loc">GPU-accelerated particulate hydrodynamics</div>
 
-        <p>Parallelizing the <strong>linearized Stokes equation over 10M+ sphere- and ellipsoid-surface points</strong> to simulate rigid bodies in viscous, low-Reynolds flow — the regime of <strong>red-blood-cell dynamics and drug-discovery modeling</strong>. Built a <strong>CUDA boundary-integral solver reaching 60× speedup</strong> through coalesced memory access and shared-memory tiling, and drove numerical error from <strong>7% down to 2%</strong> with error-control techniques on the n-body interactions.</p>
+        <p>Learning a <strong>surrogate for the dense mobility operator</strong> that maps forces and torques to velocities for N rigid particles in Stokes flow, replacing an <strong>O(N²)–O(N³) boundary-element solve</strong>. It combines an analytic far field with <strong>PyTorch/CUDA-learned near-field lubrication and many-body corrections</strong>, enforcing reciprocal symmetry and <strong>O(3) equivariance by construction</strong> on a 17-term tensor basis over a DeepSet encoder — driving velocity error from <strong>12.8% to 2.5%</strong>. The GPU side runs a <strong>warp-specialized producer–consumer FMM</strong> (lock-free shared-memory ring, 87.7% lane utilization, LBVH upward pass).</p>
         <div class="chip-row">
-          <span class="chip">CUDA</span><span class="chip">Boundary Integral Method</span>
-          <span class="chip">Stokes Flow</span><span class="chip">Shared-Memory Tiling</span>
-          <span class="chip">Error Control</span>
+          <span class="chip">Scientific ML</span><span class="chip">Equivariant Networks</span>
+          <span class="chip">CUDA / FMM</span><span class="chip">Stokes Flow</span>
+          <span class="chip">PyTorch</span><span class="chip">LBVH</span>
         </div>
       </div>
 
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Speech AI Research Assistant</span> · <span class="role-org">Heard AI</span></div>
-          <span class="role-date">Mar 2026 – Jun 2026</span>
+          <div><span class="role-title">Speech AI — Accessible Speech Technologies</span> · <span class="role-org">Heard AI · NSF</span></div>
+          <span class="role-date">2026</span>
         </div>
         <div class="role-loc">NSF Convergence Accelerator Phase 2 · $5M</div>
 
-        <p>Worked on <strong>accessible speech technologies</strong>: built <strong>speaker diarization and stutter detection models</strong> for classifying dysfluent speech, and the initial <strong>stutter speech synthesis / regeneration pipeline</strong> that generates fluent alternatives from stuttered input. Per-user fine-tuning framework lifted recognition accuracy <strong>23% (WER 14% → 10.8%)</strong>; the full-stack app served <strong>300 concurrent sessions at &lt;400 ms latency</strong>.</p>
+        <p>Built <strong>speaker diarization and stutter-detection</strong> models that segment multi-speaker audio and classify dysfluent patterns (repetitions, prolongations, blocks) from raw waveforms, plus the initial <strong>stutter speech synthesis / regeneration pipeline</strong> that generates fluent alternatives from dysfluent input. A per-user fine-tuning framework lifted recognition accuracy <strong>23% (WER 14% → 10.8%)</strong>; the full-stack app (React, Django, Flask) served <strong>300 concurrent sessions at ~400 ms latency</strong>.</p>
         <div class="chip-row">
           <span class="chip">Speaker Diarization</span><span class="chip">Stutter Detection</span>
           <span class="chip">Speech Synthesis</span><span class="chip">Fine-tuning</span>
@@ -361,28 +306,12 @@ export const CONTENT = {
         </div>
       </div>
 
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">Machine Learning Researcher</span> · <span class="role-org">Thompson Maize Lab</span></div>
-          <span class="role-date">Aug 2023 – May 2024</span>
-        </div>
-        <div class="role-loc">Michigan State University</div>
-        
-        <p>Designed a scalable SQL + MongoDB architecture for <strong>120+ dimensional</strong> phenotypic and genomic data, and built Random Forest models in TensorFlow + R reaching <strong>72% yield-prediction accuracy</strong>. Quantified Anthesis-Silking Interval (ASI) impact under environmental stress. Presented at the <strong>NAPPN Conference</strong> at Purdue.</p>
-        <p>Published abstract: <a href="https://www.authorea.com/users/530254/articles/675202" target="_blank" rel="noopener">authorea.com/users/530254/articles/675202</a>.</p>
-        <div class="chip-row">
-          <span class="chip">Random Forest</span><span class="chip">TensorFlow</span>
-          <span class="chip">R</span><span class="chip">MongoDB</span>
-          <span class="chip">Statistical Analysis</span>
-        </div>
-      </div>
-
-      <h3>HPC toolkit &amp; research interests</h3>
-      <p>Graduate Certificate in High-Performance Computing + CSE 822 Parallel Computing (4.0) underpin the systems side: <strong>attention-kernel optimization</strong> (CUDA / OpenMP / AVX2, cache-aware tiling, online softmax), <strong>MPI at scale</strong> (non-blocking Isend/Irecv overlap, one-sided RMA over 100M+ elements/rank), memory-hierarchy-aware algorithm design, and <strong>WebGPU as browser-native HPC</strong> — the ocean behind this page is my open-source <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">ocean-webgpu</a> library running a shared-memory tiled stencil kernel.</p>
+      <h3>HPC toolkit &amp; interests</h3>
+      <p>Graduate Certificate in High-Performance Computing + CSE 822 Parallel Computing (4.0) underpin the systems side: <strong>CUDA</strong> (warp specialization, shared-memory tiling, FMM / LBVH), <strong>MPI at scale</strong> (non-blocking Isend/Irecv overlap, one-sided RMA over 100M+ elements/rank), memory-hierarchy-aware algorithm design, and <strong>WebGPU as browser-native HPC</strong> — the ocean behind this page is my open-source <a href="https://github.com/AtharvaKirkole/ocean-webgpu" target="_blank" rel="noopener">ocean-webgpu</a> library running a shared-memory tiled stencil kernel.</p>
       <div class="chip-row">
         <span class="chip">CUDA</span><span class="chip">MPI / RMA</span>
-        <span class="chip">OpenMP</span><span class="chip">AVX2 / FMA</span>
-        <span class="chip">Cache Tiling</span><span class="chip">WebGPU / WGSL</span>
+        <span class="chip">FMM / LBVH</span><span class="chip">Shared-Memory Tiling</span>
+        <span class="chip">WebGPU / WGSL</span>
       </div>
     `,
   },
@@ -392,7 +321,7 @@ export const CONTENT = {
     eyebrow: "Projects",
     title: "Selected Work",
     html: `
-      <p>The flagship is the ocean you're looking at — an open-source GPU library — followed by kernel-level HPC work and applied ML systems.</p>
+      <p>All of these are real and on my <a href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">GitHub</a> or resume — led by the open-source GPU library powering this page.</p>
 
       <!-- ocean-webgpu — flagship -->
       <div class="role">
@@ -422,23 +351,28 @@ export const CONTENT = {
         </p>
       </div>
 
-      <!-- FitTrack -->
+      <!-- Kings Shot Lab -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">FitTrack — Wearable Time-Series Analytics &amp; Health Prediction</span> · <span class="role-org">Python · TensorFlow</span></div>
-          <span class="role-date">2025</span>
+          <div><span class="role-title">Kings Shot Lab — Basketball Shot-Profile Dashboard</span> · <span class="role-org">TypeScript · Vite</span></div>
+          <span class="role-date">2026</span>
         </div>
+        <div class="role-loc">Zero-backend analytics — CSV → JSON ETL, no database, no API keys</div>
 
         <ul>
-          <li>Real-time fitness analytics platform processing <strong>high-volume wearable sensor streams (~50 Hz)</strong> — heart rate, accelerometer, motion signals.</li>
-          <li>Implemented <strong>streaming data pipelines, time-series SQL storage, and a live metrics dashboard</strong>.</li>
-          <li>Trained ML models predicting <strong>age, gender, BMI, and body-fat %</strong> from sensor signals — <strong>~88% accuracy</strong>, <strong>~3.5% MAE</strong> on body-fat regression across <strong>~1.5M sample windows</strong>.</li>
+          <li>Interactive <strong>shot-profile dashboard</strong> answering the questions a coaching staff actually asks — who takes which shots and from where, which shots are efficient, and how shot-making shifts with defense, shot clock, and dribbles.</li>
+          <li>Built an in-app <strong>ETL pipeline</strong> (runs automatically on <code>npm run dev</code>) that reads a shots CSV and writes the dashboard dataset — fully client-side, no server or database.</li>
+          <li>Three linked views, including per-player <strong>deviation from the team shot profile</strong>.</li>
         </ul>
         <div class="chip-row">
-          <span class="chip">Python</span><span class="chip">TensorFlow</span>
-          <span class="chip">Time-Series</span><span class="chip">Wearables</span>
-          <span class="chip">Streaming Analytics</span>
+          <span class="chip">TypeScript</span><span class="chip">Vite</span>
+          <span class="chip">Data Viz</span><span class="chip">ETL</span>
+          <span class="chip">Sports Analytics</span>
         </div>
+        <p class="modal-footer-cta" style="margin-top:12px;">
+          <a class="inline-btn" href="https://atharvakirkole.github.io/kings-lab" target="_blank" rel="noopener">▶ Live dashboard →</a>
+          <a class="inline-btn" href="https://github.com/AtharvaKirkole/kings-lab" target="_blank" rel="noopener">GitHub →</a>
+        </p>
       </div>
 
       <!-- MyHouse + MyPro -->
@@ -456,29 +390,12 @@ export const CONTENT = {
         </ul>
         <div class="chip-row">
           <span class="chip">React</span><span class="chip">Node.js / Express</span>
+          <span class="chip">TypeScript</span><span class="chip">Docker</span>
           <span class="chip">Digital Twin</span><span class="chip">Knowledge Graph</span>
-          <span class="chip">Contractor Matching</span><span class="chip">Warranty Tracking</span>
         </div>
-      </div>
-
-      <!-- NanoGPT HPC -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">NanoGPT Attention Kernel Optimization</span> · <span class="role-org">CUDA · C++17 · OpenMP</span></div>
-          <span class="role-date">Jan 2026</span>
-        </div>
-
-        <ul>
-          <li>Implemented Transformer multi-head attention in <strong>C++17</strong> over <code>[B, H, N, D]</code> tensors with a <strong>4D accessor</strong> collapsing index/stride arithmetic.</li>
-          <li><strong>Row-tiled Q·Kᵀ</strong> and P·V matmuls to keep K/V panels resident in L1/L2.</li>
-          <li>Parallelized across (batch, head) with <strong>OpenMP</strong>, vectorized with <strong>AVX2 + FMA</strong>, and fused matmul–softmax–matmul for a <strong>68× speedup</strong>.</li>
-          <li>Built a <strong>CUDA</strong> variant with cooperative shared-memory tiling and per-thread <strong>online-softmax</strong> state.</li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">CUDA</span><span class="chip">C++17</span>
-          <span class="chip">OpenMP</span><span class="chip">AVX2 / FMA</span>
-          <span class="chip">Online Softmax</span><span class="chip">Cache Tiling</span>
-        </div>
+        <p class="modal-footer-cta" style="margin-top:12px;">
+          <a class="inline-btn" href="https://github.com/AtharvaKirkole/myhouse-mypro" target="_blank" rel="noopener">GitHub →</a>
+        </p>
       </div>
 
       <!-- Distributed Systems (MPI) -->
@@ -500,45 +417,34 @@ export const CONTENT = {
         </div>
       </div>
 
-      <!-- Tensor-Core GEMM -->
+      <!-- Intra-building Navigator -->
       <div class="role">
         <div class="role-head">
-          <div><span class="role-title">Tensor-Core GEMM (CUDA)</span> · <span class="role-org">CSE 822 · Parallel Programming</span></div>
-          <span class="role-date">Jan 2026</span>
+          <div><span class="role-title">Intra-building Navigator — MSU AI Club</span> · <span class="role-org">Flask · Python · Flutter</span></div>
+          <span class="role-date">2022</span>
         </div>
 
         <ul>
-          <li>Implemented a <strong>TF32 tensor-core GEMM</strong> using <code>mma.sync.m16n8k8</code> PTX intrinsics.</li>
-          <li><strong>float4-vectorized coalesced HBM loads</strong> with <strong>padded shared memory</strong> to eliminate bank conflicts.</li>
-          <li>Benchmarked across <strong>M ∈ [1, 3072] at K = N = 3072</strong>.</li>
+          <li>Indoor navigation system giving <strong>turn-by-turn guidance inside buildings</strong> where GPS fails — a Flask/Python backend serving a <strong>Flutter cross-platform client</strong> over HTTP, with floor-plan parsing, location resolution, and pathfinding.</li>
+          <li><strong>Image-based positioning</strong> via <strong>EXIF metadata extraction and GeoPy geolocation</strong> — resolves a user's position from a captured photo, removing the need for beacon hardware or pre-mapped WiFi fingerprints.</li>
+          <li><strong>People's Choice — MSU AI Club, 2022.</strong></li>
         </ul>
         <div class="chip-row">
-          <span class="chip">CUDA</span><span class="chip">PTX</span>
-          <span class="chip">mma.sync.m16n8k8</span><span class="chip">TF32</span>
-          <span class="chip">Bank Conflicts</span><span class="chip">HBM Coalescing</span>
+          <span class="chip">Flask</span><span class="chip">Python</span>
+          <span class="chip">Flutter</span><span class="chip">EXIF / GeoPy</span>
+          <span class="chip">Pathfinding</span>
         </div>
       </div>
 
-      <!-- AI Club Navigator -->
-      <div class="role">
-        <div class="role-head">
-          <div><span class="role-title">AI Club Navigator</span> · <span class="role-org">Flutter + Flask + CNN</span></div>
-          <span class="role-date">Jan 2023</span>
-        </div>
-
-        <ul>
-          <li>Cross-platform indoor-navigation app — <strong>CNN for image-based localization</strong>.</li>
-          <li>Real-time route optimization with <strong>A*</strong> pathfinding over building layouts.</li>
-          <li><strong>People's Choice — MSU AI Club, Fall 2022.</strong></li>
-        </ul>
-        <div class="chip-row">
-          <span class="chip">Flutter</span><span class="chip">Flask</span>
-          <span class="chip">CNN</span><span class="chip">A*</span>
-        </div>
-      </div>
+      <h3>Also on GitHub</h3>
+      <ul class="link-list">
+        <li><a href="https://github.com/AtharvaKirkole/Crop-Yield-Prediction" target="_blank" rel="noopener">Crop-Yield-Prediction →</a> — crop-yield modeling in R over agronomic datasets.</li>
+        <li><a href="https://github.com/AtharvaKirkole/Smart-Pet-Detection" target="_blank" rel="noopener">Smart-Pet-Detection →</a> — pet-detection experiment in Python.</li>
+        <li><a href="https://github.com/AtharvaKirkole/codia" target="_blank" rel="noopener">codia →</a> — early full-stack web app.</li>
+      </ul>
 
       <p class="modal-footer-cta">
-        <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">See more on GitHub →</a>
+        <a class="inline-btn" href="https://github.com/AtharvaKirkole" target="_blank" rel="noopener">See all repos on GitHub →</a>
         <a class="inline-btn" href="assets/resume.pdf" download="Atharva_Kirkole_Resume.pdf">↓ Download resume (PDF)</a>
       </p>
     `,
